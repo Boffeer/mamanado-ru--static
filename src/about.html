@@ -1,0 +1,38 @@
+<extends src="src/layouts/base.html">
+	<block name="main">
+		<section class="about-page">
+			<div class="container about-page__container">
+				<div class="about-page__text">
+					<h1 class="section__title about-page__title">О нас</h1>
+					<p class="section__desc about-page__desc">
+						Мы магазин детской обуви “Мама, надо!”. Продаём удобные и практичные
+						вещи для любого возраста и в любой сезон с 2011 года. Наши товары
+						имеют сертификат качества, а закупаем продукцию мы только от
+						проверенных производителей: Котофей, КидсАрт, ДетОбувь.
+					</p>
+
+					<p class="section__desc about-page__desc">
+						<span class="text--bold">
+							Будем рады видеть вас в наших магазинах по адресам:<br />
+						</span>
+						г. Красноярск ул. Пушкина д. Колотушкина<br />
+						г. Улан-Удэ ул. Герцена, д. 94 За ТЦ "Вояж"
+					</p>
+
+					<div class="socials about-page__socials">
+						<h3 class="socials__title">
+							Подбробнее о нашей жизни можно узнать тут:
+						</h3>
+						<include src="src/blocks/socials.html"></include>
+					</div>
+				</div>
+				<picture class="about-page__pic"
+					><img
+						src="./img/info/about.png"
+						alt="Про интернет магазин маманадо"
+						class="about-page__img"
+				/></picture>
+			</div>
+		</section>
+	</block>
+</extends>

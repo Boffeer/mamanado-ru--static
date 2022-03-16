@@ -1,0 +1,90 @@
+<extends src="src/layouts/base.html">
+	<block name="main">
+		<section class="refund">
+			<div class="container refund__container">
+				<div class="refund__inner">
+					<h1 class="section__title"></h1>
+					<p class="section__decs">Дорогие друзья</p>
+
+					<p class="section__decs">
+						Все, что мы делаем – мы делаем для Вас. Мы понимаем, что приобретая
+						товары через интернет-магазин, всегда есть риск, что Вам не
+						понравится цвет, не подойдет размер или фасон. Нам важно, чтобы
+						совершение покупок с интернет-магазином «Мама, надо!» было для Вас
+						комфортным и приятным, поэтому мы постарались сделать процесс
+						возврата товаров удобным и быстрым.
+					</p>
+
+					<p class="section__decs">
+						Если заказ выкупался из розничного магазина, и Вы хотите осуществить
+						возврат товара надлежащего качества, в течении 14 дней Вам
+						необходимо обратится в тот же магазин для осуществления возврата.
+						При себе иметь паспорт и чек.
+					</p>
+				</div>
+				<form class="refund-form form">
+					<input type="text" name="form_page" hidden />
+					<input type="text" name="form_name" hidden />
+					<div class="refund-form-input__wrap refund-form-input__wrap--name">
+						<input
+							class="input refund-form-input refund-form-input--name"
+							name="user_name"
+							type="text"
+							placeholder="Имя"
+							maxlength="50"
+							required
+						/>
+					</div>
+					<div class="refund-form-input__wrap refund-form-input__wrap--email">
+						<input
+							class="refund-form-input refund-form-input--email"
+							name="user_email"
+							type="email"
+							placeholder="Электронный адрес"
+							required
+						/>
+					</div>
+					<div class="refund-form-input__wrap refund-form-input__wrap--tel">
+						<input
+							class="refund-form-input refund-form-input--phone"
+							name="user_tel"
+							type="tel"
+							placeholder="Телефон"
+							maxlength="25"
+							minlength="10"
+							required
+							inputmode="numeric"
+						/>
+					</div>
+					<textarea
+						name="user_message"
+						class="textarea"
+						placeholder="Текст сообщения"
+						required
+					></textarea>
+					<button
+						class="button button--primary refund-form__submit form__submit"
+					>
+						Отправить
+					</button>
+					<label class="form-privacy">
+						<input
+							class="form-privacy__checkbox-hidden"
+							type="checkbox"
+							checked
+							required
+							hidden
+						/>
+						<span class="form-privacy__checkbox"></span>
+						<p class="form-privacy__desc">
+							Согласен Нажимая на кнопку, Вы принимаете
+							<a href="#" class="form-privacy__desc-link">
+								условия политики конфиденциальности
+							</a>
+						</p>
+					</label>
+				</form>
+			</div>
+		</section>
+	</block>
+</extends>
