@@ -1,0 +1,20 @@
+{
+  "name": "mamanado-ru--static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
+    "autoprefixer": "^10.4.4",
+    "editorconfig": "^0.15.3",
+    "editorconfig-checker": "^4.0.2",
+    "parcel": "^2.3.2",
+    "postcss-import": "^14.0.2",
+    "posthtml-include": "^1.7.2"
+  }
+}
