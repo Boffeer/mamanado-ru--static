@@ -1,7 +1,7 @@
 {
 	"xmlMode": true,
   "plugins": {
-    "posthtml-include": {},
-    "posthtml-extend": {}
+    "posthtml-extend": {},
+    "posthtml-include": {}
   }
 }

@@ -22,20 +22,17 @@
 		<link rel="stylesheet" href="./css/index.scss" />
 	</head>
 	<body>
-		<header class="header"></header>
+		<block name="header">
+			<include src="src/layouts/header.html"> </include>
+		</block>
 
 		<main class="main">
 			<block name="main"></block>
 		</main>
-		<include src="src/layouts/blog.html"></include>
-		<include src="src/layouts/footer.html"></include>
 
-		<div class="popups">
-			<div class="pop-thanks">
-				<p class="pop-thanks__title">Спасибо, ваша заявка отправлена</p>
-				<p class="pop-thanks__desc">Мы перезвоним вам в ближайшее время</p>
-			</div>
-		</div>
+		<block name="footer" src="src/layouts/footer.html">
+			<include src="src/layouts/footer.html"> </include>
+		</block>
 
 		<script src="index.js"></script>
 		<script src="./js/index.js"></script>
