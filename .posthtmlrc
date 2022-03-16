@@ -1,0 +1,6 @@
+{
+	"xmlMode": true,
+  "plugins": {
+    "posthtml-include": {}
+  }
+}
