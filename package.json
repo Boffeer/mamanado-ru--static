@@ -5,7 +5,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "main": "index.js",
   "scripts": {
-    "dev": "npx parcel src/index.html",
+    "cleanup": "rm -rf .parcel-cache dist",
+    "dev": "npm run cleanup && parcel src/index.html",
     "build": "npx parcel build src/index.html"
   },
   "author": "",
@@ -20,6 +21,7 @@
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
+    "posthtml-extend": "^0.6.2",
     "posthtml-include": "^1.7.2",
     "sass": "^1.49.9"
   },
