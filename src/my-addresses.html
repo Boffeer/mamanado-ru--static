@@ -1,0 +1,93 @@
+<extends src="src/layouts/base.html">
+	<block name="main">
+		<div class="container">
+			<h1 class="account__tilte">Личный кабинет</h1>
+			<section class="account__page">
+				<include src="src/blocks/account-nav.html"></include>
+				<div class="account__content">
+					<h2 class="account__content-title">Мои адреса</h2>
+					<ul class="account-adresses">
+						<li class="account-addresses__item">
+							<p class="account-addresses__geo">
+								г. Красноярск, ул. Нарвская, д. 12, кв. 506
+							</p>
+							<button class="button button--primary account-addresses__chagne">
+								Изменить
+							</button>
+							<button class="button button--secondary button--danger">
+								Удалить
+							</button>
+						</li>
+					</ul>
+					<button class="account-addresses__new button button--secondary">
+						Добавить адрес
+					</button>
+
+					<form class="account-addresses__form">
+						<div class="input__wrap">
+							<small class="input__placeholder">Город</small>
+							<input class="input" name="city" type="text" />
+						</div>
+						<div class="input__wrap">
+							<small class="input__placeholder">Улица</small>
+							<input class="input" name="city" type="text" />
+						</div>
+						<div class="input__wrap input__wrap-half">
+							<small class="input__placeholder">Дом</small>
+							<input
+								class="input"
+								name="city"
+								type="text"
+								inputmode="numeric"
+								required
+							/>
+						</div>
+						<div class="input__wrap input__wrap-half">
+							<small class="input__placeholder">Строение</small>
+							<input
+								class="input"
+								name="city"
+								type="text"
+								inputmode="numeric"
+							/>
+						</div>
+						<div class="input__wrap input__wrap-half">
+							<small class="input__placeholder">Квартира</small>
+							<input
+								class="input"
+								name="city"
+								type="text"
+								inputmode="numeric"
+							/>
+						</div>
+						<div class="input__wrap input__wrap-half">
+							<small class="input__placeholder">Домофон</small>
+							<input
+								class="input"
+								name="city"
+								type="text"
+								inputmode="numeric"
+							/>
+						</div>
+						<div class="account-addresses__form-buttons">
+							<button class="button button--primary account-addresses__create">
+								Сохранить
+							</button>
+							<button
+								class="button button--secondary button--danger account-addresses__discard"
+							>
+								Закрыть
+							</button>
+						</div>
+					</form>
+					<div class="empty">
+						<p>У вас нет адресов</p>
+						<button class="button button--secondary account-addressses-new">
+							Добавить адрес
+						</button>
+					</div>
+				</div>
+			</section>
+		</div>
+	</block>
+</extends>
