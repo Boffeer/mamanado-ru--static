@@ -1,0 +1,47 @@
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.hidden {
+	visibility: hidden;
+}
+a,
+button {
+	cursor: pointer;
+}
+input,
+button {
+	display: inline-block;
+	border: none;
+	padding: 0;
+	background: none;
+}
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol {
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+}
+h2 {
+	font-size: var(--fz-title-section);
+}
+ul,
+ol {
+	list-style: none;
+}
+body {
+	font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+	font-size: var(--fz-base);
+	color: var(--c-text-regular);
+}
