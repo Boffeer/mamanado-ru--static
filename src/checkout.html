@@ -1,0 +1,199 @@
+<extends src="src/layouts/base.html">
+	<block name="main">
+		<section class="cart__page">
+			<div class="container cart__container">
+				<h1 class="page__title">Заказ</h1>
+				<div class="cart-table">
+					<include src="src/blocks/cart-table.html"></include>
+				</div>
+
+				<div class="checkout-order">
+					<fieldset class="checkout-order__column">
+						<legend class="checkout-order__title">Доставка</legend>
+						<div class="checkout-shipping">
+							<div class="checkout-shipping-group">
+								<h3 class="checkout-shipping-group__title">
+									Выбрать пункт самовывоза:
+								</h3>
+								<label class="checkout-shipping__medhod radio">
+									<input
+										class="radio__checkbox-hidden"
+										type="radio"
+										name="shipping_medhod"
+										value=""
+										checked
+										required
+										hidden
+									/>
+									<span class="radio__checkbox"></span>
+									<p class="radio__label">
+										г. Красноярск ул. Пушкина д. Колотушкина
+									</p>
+								</label>
+								<label class="checkout-shipping__medhod radio">
+									<input
+										class="radio__checkbox-hidden"
+										type="radio"
+										name="shipping_medhod"
+										value=""
+										checked
+										required
+										hidden
+									/>
+									<span class="radio__checkbox"></span>
+									<p class="radio__label">
+										г. Улан-Удэ ул. Герцена, д. 94 За ТЦ "Вояж"
+									</p>
+								</label>
+							</div>
+							<div class="checkout-shipping-group">
+								<h3 class="checkout-shipping-group__title">Доставить домой</h3>
+								<label class="checkout-shipping__medhod radio">
+									<input
+										class="radio__checkbox-hidden"
+										type="radio"
+										name="shipping_medhod"
+										value=""
+										checked
+										required
+										hidden
+									/>
+									<span class="radio__checkbox"></span>
+									<p class="radio__label">
+										г. Красноярск ул. Пушкина д. Колотушкина
+									</p>
+								</label>
+								<button
+									class="button--secondary button button-shipping__new-address"
+								>
+									Другой адрес
+								</button>
+
+								<form class="account-addresses__form">
+									<div class="input__wrap">
+										<small class="input__placeholder">Город</small>
+										<input class="input" name="city" type="text" />
+									</div>
+									<div class="input__wrap">
+										<small class="input__placeholder">Улица</small>
+										<input class="input" name="city" type="text" />
+									</div>
+									<div class="input__wrap input__wrap-half">
+										<small class="input__placeholder">Дом</small>
+										<input
+											class="input"
+											name="city"
+											type="text"
+											inputmode="numeric"
+											required
+										/>
+									</div>
+									<div class="input__wrap input__wrap-half">
+										<small class="input__placeholder">Строение</small>
+										<input
+											class="input"
+											name="city"
+											type="text"
+											inputmode="numeric"
+										/>
+									</div>
+									<div class="input__wrap input__wrap-half">
+										<small class="input__placeholder">Квартира</small>
+										<input
+											class="input"
+											name="city"
+											type="text"
+											inputmode="numeric"
+										/>
+									</div>
+									<div class="input__wrap input__wrap-half">
+										<small class="input__placeholder">Домофон</small>
+										<input
+											class="input"
+											name="city"
+											type="text"
+											inputmode="numeric"
+										/>
+									</div>
+									<div class="account-addresses__form-buttons">
+										<button
+											class="button button--primary account-addresses__create"
+										>
+											Добавить адрес
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="checkout-order__column">
+						<legend class="checkout-order__title">Ваш заказ</legend>
+						<div class="checkout-total">
+							<h3 class="checkout-total__title">Итого</h3>
+							<p class="checkout-total__value">120 990 ₽</p>
+						</div>
+						<div class="input__wrap input__wrap--name">
+							<input
+								class="input input__checkout-order-promo"
+								name="promo"
+								type="text"
+								placeholder="Ваш промокод"
+							/>
+						</div>
+						<div class="checkout-payment-group">
+							<h3 class="checkout-payment-group__title">
+								Выберите способ оплаты
+							</h3>
+							<label class="checkout-payment__medhod radio">
+								<input
+									class="radio__checkbox-hidden"
+									type="radio"
+									name="payment_medhod"
+									value=""
+									checked
+									required
+									hidden
+								/>
+								<span class="radio__checkbox"></span>
+								<p class="radio__label">Оплата на сайте</p>
+							</label>
+							<label class="checkout-payment__medhod radio">
+								<input
+									class="radio__checkbox-hidden"
+									type="radio"
+									name="payment_medhod"
+									value=""
+									checked
+									required
+									hidden
+								/>
+								<span class="radio__checkbox"></span>
+								<p class="radio__label">Оплата курьеру наличными</p>
+							</label>
+							<label class="checkout-payment__medhod radio">
+								<input
+									class="radio__checkbox-hidden"
+									type="radio"
+									name="payment_medhod"
+									value=""
+									checked
+									required
+									hidden
+								/>
+								<span class="radio__checkbox"></span>
+								<p class="radio__label">
+									Оплата банковской картой при получении
+								</p>
+							</label>
+						</div>
+					</fieldset>
+					<div class="buttons__aligner">
+						<button class="button button--primary button__checkout">
+							Оформить
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</block>
+</extends>
