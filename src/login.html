@@ -1,0 +1,36 @@
+<extends src="src/layouts/base.html">
+	<block name="main">
+		<div class="container">
+			<form class="login-form form-account form">
+				<h1 class="form__title">Вход</h1>
+				<div class="form-account-input__wrap">
+					<input
+						class="input form-account-input"
+						name="login"
+						type="text"
+						placeholder="Логин"
+						required
+					/>
+				</div>
+				<div class="form-account-input__wrap">
+					<input
+						class="input form-account-input"
+						name="password"
+						type="password"
+						placeholder="Пароль"
+						required
+					/>
+				</div>
+				<button class="button button--primary login-form__submit">Войти</button>
+				<div class="login-form__links">
+					<a
+						href="register.html"
+						class="login-form__link login-form__link--primary"
+						>Еще нет аккаунта?</a
+					>
+					<a href="#" class="login-form__link">Забыли пароль?</a>
+				</div>
+			</form>
+		</div>
+	</block>
+</extends>

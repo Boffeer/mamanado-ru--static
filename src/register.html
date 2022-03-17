@@ -1,0 +1,158 @@
+<extends src="src/layouts/base.html">
+	<block name="main">
+		<div class="container">
+			<form class="register-form form-account form">
+				<h1 class="form__title">Регистрация</h1>
+				<div class="register-form__left">
+					<fieldset>
+						<legend>Основные данные</legend>
+						<div class="form-account-input__wrap">
+							<input
+								class="input form-account-input"
+								name="first_name"
+								type="text"
+								placeholder="Имя"
+								required
+							/>
+						</div>
+						<div class="form-account-input__wrap">
+							<input
+								class="input form-account-input"
+								name="last_name"
+								type="text"
+								placeholder="Фамилия"
+								required
+							/>
+						</div>
+						<div class="form-account-input__wrap">
+							<input
+								class="input form-account-input"
+								name="email"
+								type="email"
+								placeholder="E-mail-адрес"
+								required
+							/>
+						</div>
+						<div class="form-account-input__wrap">
+							<input
+								class="input form-account-input"
+								name="user-tel"
+								type="tel"
+								placeholder=""
+								maxlength="25"
+								minlength="10"
+								required
+								inputmode="numeric"
+							/>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Ребенок</legend>
+						<div class="form-account-input__wrap">
+							<input
+								class="input form-account-input"
+								name="child_date[0]"
+								type="email"
+								placeholder="Дата рождения"
+								required
+							/>
+						</div>
+						<div class="form-account-input__wrap">
+							<input
+								class="input form-account-input"
+								name="child_date[1]"
+								type="email"
+								placeholder="Дата рождения"
+								required
+							/>
+						</div>
+					</fieldset>
+				</div>
+				<div class="register-form__right">
+					<fieldset>
+						<legend>Пароль</legend>
+						<div class="form-account-input__wrap">
+							<input
+								class="input form-account-input"
+								name="password"
+								type="password"
+								placeholder="Пароль"
+								required
+							/>
+						</div>
+						<div class="form-account-input__wrap">
+							<input
+								class="input form-account-input"
+								name="password_repeat"
+								type="password"
+								placeholder="Повторите пароль"
+								required
+							/>
+						</div>
+					</fieldset>
+					<label class="form-privacy">
+						<input
+							name="bonus_program_accept"
+							class="form-privacy__checkbox-hidden"
+							type="checkbox"
+							checked
+							required
+							hidden
+						/>
+						<span class="form-privacy__checkbox"></span>
+						<p class="form-privacy__desc">
+							Я соглашаюсь с
+							<a href="#" class="form-privacy__desc-link">
+								Правилами бонусной программы
+							</a>
+							и даю согласие на обработку своих персональных данных
+						</p>
+					</label>
+					<label class="form-privacy">
+						<input
+							name="offer_accept"
+							class="form-privacy__checkbox-hidden"
+							type="checkbox"
+							checked
+							required
+							hidden
+						/>
+						<span class="form-privacy__checkbox"></span>
+						<p class="form-privacy__desc">
+							Я соглашаюсь с персональных данных
+							<a href="#" class="form-privacy__desc-link"> условиями оферты </a>
+							и даю согласие на обработку своих
+						</p>
+					</label>
+					<label class="form-privacy">
+						<input
+							name="email_sms_accept"
+							class="form-privacy__checkbox-hidden"
+							type="checkbox"
+							checked
+							required
+							hidden
+						/>
+						<span class="form-privacy__checkbox"></span>
+						<p class="form-privacy__desc">
+							Получать
+							<a href="#" class="form-privacy__desc-link">
+								рассылку по email и SMS
+							</a>
+						</p>
+					</label>
+				</div>
+				<button class="button button--primary login-form__submit">
+					Зарегистрироваться
+				</button>
+				<div class="login-form__links">
+					<a
+						href="login.html"
+						class="login-form__link login-form__link--primary"
+						>Уже есть аккаунт?</a
+					>
+				</div>
+			</form>
+		</div>
+	</block>
+</extends>
