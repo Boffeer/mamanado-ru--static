@@ -1,9 +1,46 @@
 <extends src="src/layouts/base.html">
 	<block name="main">
 		<div class="container">
-			<h1 class="account__tilte">Личный кабинет</h1>
+			<h1 class="section__title account__title">Личный кабинет</h1>
 			<section class="account__page">
 				<include src="src/blocks/account-nav.html"></include>
+				<div class="wishlist">
+					<h2 class="account__content-title">Список желаний</h2>
+					<div class="wishlist__card">
+						<include src="src/blocks/product-cell.html"></include>
+						<div class="wishlist__price">
+							3500₽
+							<small class="wishlist__price-caption"> за шт </small>
+						</div>
+						<div class="wishlist__buttons">
+							<button class="button button--primary wishlist__buy">
+								Добавить в корзину
+							</button>
+							<button
+								class="button button--secondary button--danger wishlist__remove"
+							>
+								Убрать
+							</button>
+						</div>
+					</div>
+					<div class="wishlist__card">
+						<include src="src/blocks/product-cell.html"></include>
+						<div class="wishlist__price">
+							3500₽
+							<small class="wishlist__price-caption"> за шт </small>
+						</div>
+						<div class="wishlist__buttons">
+							<button class="button button--primary wishlist__buy">
+								Добавить в корзину
+							</button>
+							<button
+								class="button button--secondary button--danger wishlist__remove"
+							>
+								Убрать
+							</button>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 	</block>

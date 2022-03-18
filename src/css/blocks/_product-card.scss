@@ -136,3 +136,36 @@
 	line-height: 120%;
 	color: #444444;
 }
+
+// @product-cell
+.product-cell {
+	display: flex;
+	align-items: center;
+}
+.product-cell__pic {
+	display: block;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #e4e4e4;
+	background-color: #fff;
+	margin-right: 12px;
+}
+.product-cell__img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: contain;
+}
+.product-cell__name {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #444444;
+	margin-bottom: 7px;
+}
+.product-cell__stats {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #adadad;
+}
