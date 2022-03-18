@@ -1,14 +1,11 @@
-<header class="hedaer">
+<header class="header">
 	<div class="container header__container">
 		<button class="burger">
 			<span class="burger__line"></span>
 			<span class="burger__line"></span>
 			<span class="burger__line"></span>
 		</button>
-		<a
-			href="#branding"
-			class="branding header__branding hidden-desktop"
-		>
+		<a href="#branding" class="branding header__branding hidden-desktop">
 			<svg
 				width="88"
 				height="23"
@@ -103,10 +100,7 @@
 			</svg>
 		</a>
 		<div class="header-menu">
-			<a
-				href="#branding"
-				class="branding header__branding hidden-mobile
-			>
+			<a href="#branding" class="branding header__branding hidden-mobile">
 				<svg
 					width="114"
 					height="30"
@@ -201,10 +195,12 @@
 				</svg>
 			</a>
 			<div class="header__contacts">
-				<div class="header__geo">
+				<div class="header__geo bayan" data-bayan="absolute">
 					<div class="header__geo--current">Красноярск</div>
 					<ul class="header__geo-list">
-						<li class="header__geo-item">Красноярск</li>
+						<li class="header__geo-item header__geo-item--current">
+							Красноярск
+						</li>
 						<li class="header__geo-item">Улан-Удэ</li>
 					</ul>
 				</div>
@@ -291,7 +287,7 @@
 					class="header-userbar__item header-userbar__item--wishlist"
 				>
 					<svg
-						class="hedaer-userbar__icon"
+						class="header-userbar__icon"
 						width="23"
 						height="20"
 						viewBox="0 0 23 20"
@@ -325,7 +321,10 @@
 					</svg>
 					<p class="header-userbar__desc">Корзина</p>
 				</a>
-				<div class="header-userbar__item header-userbar__item--account">
+				<a
+					href="orders.html"
+					class="header-userbar__item header-userbar__item--account"
+				>
 					<svg
 						class="header-userbar__icon"
 						width="19"
@@ -340,7 +339,7 @@
 						/>
 					</svg>
 					<p class="header-userbar__desc">Личный кабинет</p>
-				</div>
+				</a>
 			</div>
 		</div>
 		<nav class="header-nav">
@@ -362,14 +361,12 @@
 				<div class="header-nav__tab">
 					<div
 						class="header-nav__accordion bayan bayan--desktop-hover bayan--mobile-click"
-						data-bayan="absolute"
+						data-bayan="absolute radio"
 						data-bayan-mobile="static"
 					>
-						<a href="#category" class="header-nav__category"
-							>Cопутствующие товары</a
-						>
+						<a href="#category" class="header-nav__category">Зимняя обувь</a>
 						<div class="header-nav__dropdown">
-							<h3 class="header-nav__title">Cопутствующие товары</h3>
+							<h3 class="header-nav__title">Зимняя обувь</h3>
 							<ul class="header-nav__subcategories">
 								<li class="header-nav__subcategory">
 									<a href="blog.html" class="header-nav__subcategory-link">
@@ -428,10 +425,81 @@
 						data-bayan-mobile="static"
 					>
 						<a href="#category" class="header-nav__category"
-							>Cопутствующие товары</a
+							>Весенне-осенняя обувь</a
 						>
 						<div class="header-nav__dropdown">
-							<h3 class="header-nav__title">Cопутствующие товары</h3>
+							<h3 class="header-nav__title">Весенне-осенняя обувь</h3>
+							<ul class="header-nav__subcategories">
+								<li class="header-nav__subcategory">Стельки</li>
+								<li class="header-nav__subcategory">Шнурки</li>
+								<li class="header-nav__subcategory">Аксессуары</li>
+								<li class="header-nav__subcategory">Носки</li>
+								<li class="header-nav__subcategory">Гольфы</li>
+								<li class="header-nav__subcategory">Колготки</li>
+								<li class="header-nav__subcategory">Зонты</li>
+								<li class="header-nav__subcategory">Рюкзаки</li>
+								<li class="header-nav__subcategory">
+									Средства по уходу за обувью
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="header-nav__accordion bayan bayan--desktop-hover bayan--mobile-click"
+						data-bayan="absolute"
+						data-bayan-mobile="static"
+					>
+						<a href="#category" class="header-nav__category">Летняя обувь</a>
+						<div class="header-nav__dropdown">
+							<h3 class="header-nav__title">Летняя обувь</h3>
+							<ul class="header-nav__subcategories">
+								<li class="header-nav__subcategory">Стельки</li>
+								<li class="header-nav__subcategory">Шнурки</li>
+								<li class="header-nav__subcategory">Аксессуары</li>
+								<li class="header-nav__subcategory">Носки</li>
+								<li class="header-nav__subcategory">Гольфы</li>
+								<li class="header-nav__subcategory">Колготки</li>
+								<li class="header-nav__subcategory">Зонты</li>
+								<li class="header-nav__subcategory">Рюкзаки</li>
+								<li class="header-nav__subcategory">
+									Средства по уходу за обувью
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="header-nav__accordion bayan bayan--desktop-hover bayan--mobile-click"
+						data-bayan="absolute"
+						data-bayan-mobile="static"
+					>
+						<a href="#category" class="header-nav__category"
+							>Обувь для активного отдыха</a
+						>
+						<div class="header-nav__dropdown">
+							<h3 class="header-nav__title">Обувь для активного отдыха</h3>
+							<ul class="header-nav__subcategories">
+								<li class="header-nav__subcategory">Стельки</li>
+								<li class="header-nav__subcategory">Шнурки</li>
+								<li class="header-nav__subcategory">Аксессуары</li>
+								<li class="header-nav__subcategory">Носки</li>
+								<li class="header-nav__subcategory">Гольфы</li>
+								<li class="header-nav__subcategory">Колготки</li>
+								<li class="header-nav__subcategory">Зонты</li>
+								<li class="header-nav__subcategory">Рюкзаки</li>
+								<li class="header-nav__subcategory">
+									Средства по уходу за обувью
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="header-nav__accordion bayan bayan--desktop-hover bayan--mobile-click"
+						data-bayan="absolute"
+						data-bayan-mobile="static"
+					>
+						<a href="#category" class="header-nav__category">Акции</a>
+						<div class="header-nav__dropdown">
+							<h3 class="header-nav__title">Акции</h3>
 							<ul class="header-nav__subcategories">
 								<li class="header-nav__subcategory">Стельки</li>
 								<li class="header-nav__subcategory">Шнурки</li>
@@ -477,86 +545,9 @@
 						data-bayan="absolute"
 						data-bayan-mobile="static"
 					>
-						<a href="#category" class="header-nav__category"
-							>Cопутствующие товары</a
-						>
+						<a href="#category" class="header-nav__category">Покупателям</a>
 						<div class="header-nav__dropdown">
-							<h3 class="header-nav__title">Cопутствующие товары</h3>
-							<ul class="header-nav__subcategories">
-								<li class="header-nav__subcategory">Стельки</li>
-								<li class="header-nav__subcategory">Шнурки</li>
-								<li class="header-nav__subcategory">Аксессуары</li>
-								<li class="header-nav__subcategory">Носки</li>
-								<li class="header-nav__subcategory">Гольфы</li>
-								<li class="header-nav__subcategory">Колготки</li>
-								<li class="header-nav__subcategory">Зонты</li>
-								<li class="header-nav__subcategory">Рюкзаки</li>
-								<li class="header-nav__subcategory">
-									Средства по уходу за обувью
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div
-						class="header-nav__accordion bayan bayan--desktop-hover bayan--mobile-click"
-						data-bayan="absolute"
-						data-bayan-mobile="static"
-					>
-						<a href="#category" class="header-nav__category"
-							>Cопутствующие товары</a
-						>
-						<div class="header-nav__dropdown">
-							<h3 class="header-nav__title">Cопутствующие товары</h3>
-							<ul class="header-nav__subcategories">
-								<li class="header-nav__subcategory">Стельки</li>
-								<li class="header-nav__subcategory">Шнурки</li>
-								<li class="header-nav__subcategory">Аксессуары</li>
-								<li class="header-nav__subcategory">Носки</li>
-								<li class="header-nav__subcategory">Гольфы</li>
-								<li class="header-nav__subcategory">Колготки</li>
-								<li class="header-nav__subcategory">Зонты</li>
-								<li class="header-nav__subcategory">Рюкзаки</li>
-								<li class="header-nav__subcategory">
-									Средства по уходу за обувью
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div
-						class="header-nav__accordion bayan bayan--desktop-hover bayan--mobile-click"
-						data-bayan="absolute"
-						data-bayan-mobile="static"
-					>
-						<a href="#category" class="header-nav__category"
-							>Cопутствующие товары</a
-						>
-						<div class="header-nav__dropdown">
-							<h3 class="header-nav__title">Cопутствующие товары</h3>
-							<ul class="header-nav__subcategories">
-								<li class="header-nav__subcategory">Стельки</li>
-								<li class="header-nav__subcategory">Шнурки</li>
-								<li class="header-nav__subcategory">Аксессуары</li>
-								<li class="header-nav__subcategory">Носки</li>
-								<li class="header-nav__subcategory">Гольфы</li>
-								<li class="header-nav__subcategory">Колготки</li>
-								<li class="header-nav__subcategory">Зонты</li>
-								<li class="header-nav__subcategory">Рюкзаки</li>
-								<li class="header-nav__subcategory">
-									Средства по уходу за обувью
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div
-						class="header-nav__accordion bayan bayan--desktop-hover bayan--mobile-click"
-						data-bayan="absolute"
-						data-bayan-mobile="static"
-					>
-						<a href="#category" class="header-nav__category"
-							>Cопутствующие товары</a
-						>
-						<div class="header-nav__dropdown">
-							<h3 class="header-nav__title">Cопутствующие товары</h3>
+							<h3 class="header-nav__title">Покупателям</h3>
 							<ul class="header-nav__subcategories">
 								<li class="header-nav__subcategory">Стельки</li>
 								<li class="header-nav__subcategory">Шнурки</li>

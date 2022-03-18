@@ -7,6 +7,7 @@
   "scripts": {
     "cleanup": "rm -rf .parcel-cache dist",
     "dev": "npm run cleanup && parcel src/index.html",
+    "dev2": "npm run cleanup && parcel src/index.html src/css/*.scss",
     "build": "npx parcel build --no-minify src/index.html"
   },
   "author": "",
