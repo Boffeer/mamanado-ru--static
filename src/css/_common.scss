@@ -136,3 +136,31 @@
 		max-width: 1170px;
 	}
 }
+
+// @button
+
+.button {
+	display: block;
+	padding: 20px;
+	max-width: 270px;
+	width: 100%;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 130%;
+	text-align: center;
+}
+.button--primary {
+	color: #fff;
+	background: #7486c7;
+	border-radius: 10px;
+}
+
+// @type @title @text
+
+.section__title {
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 120%;
+	color: #444444;
+	margin-bottom: 45px;
+}

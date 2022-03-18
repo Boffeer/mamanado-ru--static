@@ -3,7 +3,14 @@
 	padding-top: 25px;
 	padding-bottom: 25px;
 	z-index: 20;
+	background-color: #fff;
 }
+.header__container {
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+}
+
 .header-menu {
 	display: flex;
 	align-items: center;
@@ -242,4 +249,56 @@
 	line-height: 21px;
 	color: #444444;
 	margin-bottom: 25px;
+}
+
+// @search
+.search {
+	padding-top: 35px;
+	padding-bottom: 35px;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.02);
+	transition: 0.3s all;
+}
+.search__wrap {
+	position: relative;
+	max-width: 550px;
+	border-bottom: 1px solid #919191;
+	margin-left: auto;
+	margin-right: auto;
+	&:after {
+		content: "";
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color: #686868;
+		--search-mask: url("../img/common/search.svg") center / 15px 15px;
+		mask: var(--search-mask);
+		mask-repeat: no-repeat;
+		-webkit-mask: var(--search-mask);
+		-webkit-mask-repeat: no-repeat;
+	}
+}
+.search__input {
+	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 14px;
+	line-height: 17px;
+	color: #444;
+}
+
+.header--search-active {
+	.search {
+		background: #fff;
+		bottom: -110px;
+	}
 }

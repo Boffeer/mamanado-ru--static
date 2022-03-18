@@ -1,0 +1,65 @@
+.featured {
+	padding-top: 40px;
+	padding-bottom: 55px;
+}
+.featured__container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.featured__title {
+	margin-bottom: 0;
+}
+.featured__gallery {
+	width: 100%;
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 270px);
+	gap: 25px 30px;
+}
+.featured-buttons {
+	display: flex;
+	justify-content: space-between;
+}
+.featured__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// width: 67px;
+	// height: 67px;
+	padding: 12px;
+	border-radius: 100%;
+	background: #ffffff;
+	box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.2);
+	&::after {
+		width: 47px;
+		height: 47px;
+	}
+}
+.featured__button-prev {
+	margin-right: 35px;
+	&::after {
+		content: "";
+		display: block;
+		// width: 80%;
+		// height: 80%;
+		background-image: url("../img/common/arrow-left.svg");
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.featured__button-next {
+	&::after {
+		content: "";
+		display: block;
+		// width: 80%;
+		// height: 80%;
+		background-image: url("../img/common/arrow-right.svg");
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}

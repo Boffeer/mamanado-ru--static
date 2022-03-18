@@ -1,0 +1,55 @@
+.shops {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #fff;
+}
+.shops__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.shops__title {
+	margin-bottom: 10px;
+}
+.shops__desc {
+	margin-bottom: 16px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 130%;
+	color: #444444;
+}
+
+.shops-addresses {
+	max-width: 370px;
+	padding: 25px;
+	margin-bottom: 25px;
+	border: 1px solid transparent;
+	background: #ffffff;
+	box-sizing: border-box;
+	box-shadow: 0px 14px 44px rgba(197, 197, 197, 0.25);
+	border-radius: 20px;
+}
+.shops-addresses--active {
+	border: 1px solid #7486c7;
+}
+
+.shops-addresses__location {
+	display: flex;
+	margin-bottom: 20px;
+}
+.shops-addresses__time {
+	display: flex;
+}
+
+.shops-addresses__icon {
+	min-width: 24px;
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+}
+
+.shops__map {
+	overflow: hidden;
+	filter: drop-shadow(0px 14px 44px rgba(197, 197, 197, 0.25));
+	border-radius: 20px;
+}
