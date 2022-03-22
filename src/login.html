@@ -1,34 +1,36 @@
 <extends src="src/layouts/base.html">
 	<block name="main">
-		<div class="container">
+		<div class="container form-account__container">
 			<form class="login-form form-account form">
 				<h1 class="form__title">Вход</h1>
-				<div class="form-account-input__wrap">
+				<div class="form-account-input__wrap input__wrap">
 					<input
 						class="input form-account-input"
 						name="login"
 						type="text"
-						placeholder="Логин"
 						required
 					/>
+					<label class="input__placeholder">Логин</label>
 				</div>
-				<div class="form-account-input__wrap">
+				<div class="form-account-input__wrap input__wrap">
 					<input
 						class="input form-account-input"
 						name="password"
 						type="password"
-						placeholder="Пароль"
 						required
 					/>
+					<label class="input__placeholder">Пароль</label>
 				</div>
 				<button class="button button--primary login-form__submit">Войти</button>
 				<div class="login-form__links">
 					<a
 						href="register.html"
-						class="login-form__link login-form__link--primary"
+						class="login-form__link login-form__link--primary button button--thirdly"
 						>Еще нет аккаунта?</a
 					>
-					<a href="#" class="login-form__link">Забыли пароль?</a>
+					<a href="#" class="login-form__link button button--thirdly"
+						>Забыли пароль?</a
+					>
 				</div>
 			</form>
 		</div>

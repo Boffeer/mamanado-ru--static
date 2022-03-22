@@ -40,6 +40,24 @@
 	background: rgba(116, 134, 199, 0.05);
 	border-bottom: 1px solid #eaeaea;
 	border-top: 1px solid #eaeaea;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		right: 25px;
+		top: 50%;
+		transform: translateY(-50%);
+		display: block;
+		width: 12px;
+		height: 12px;
+		background-color: #bdbdbd;
+		--arrow-mask: url("../img/common/angle-bold-right.svg") center / contain;
+		mask: var(--arrow-mask);
+		-webkit-mask: var(--arrow-mask);
+		mask-repeat: no-repeat;
+		-webkit-mask-repeat: no-repeat;
+	}
+
 	&:first-of-type {
 		border-top: 1px solid transparent;
 	}
@@ -248,4 +266,95 @@
 }
 .account-orders__cell.complete {
 	color: var(--c-valid);
+}
+
+// @login @register
+.form-account__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 70px;
+	padding-bottom: 80px;
+}
+.form-account {
+	padding: 30px 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff;
+	box-shadow: 0px 14px 44px rgba(197, 197, 197, 0.25);
+	border-radius: 20px;
+}
+.form__title {
+	width: 100%;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 30px;
+	text-align: center;
+	color: #444444;
+	margin-bottom: 25px;
+}
+
+.form-account-input__wrap {
+	margin-bottom: 20px;
+}
+
+.login-form__links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login-form__link {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	&::after {
+		bottom: 8px;
+	}
+}
+
+.login-form__link--primary {
+	--button-color: var(--c-primary);
+	transition: 0.25s all;
+	&::after {
+		opacity: 0.5;
+		transition: 0.25s all;
+	}
+	&:hover::after {
+		transition: 0.25s all;
+		opacity: 1;
+	}
+}
+
+.register-form {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	max-width: 969px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.register-form__left,
+.register-form__right {
+	max-width: 330px;
+	min-width: 260px;
+}
+
+.form-account-input__wrap .form-account-input {
+	margin-bottom: 0;
+	margin-right: 0;
+	max-width: 100%;
+}
+.form-account-input__wrap {
+	max-width: 330px;
+	width: 100%;
+}
+
+.register-form__submit {
+	max-width: 100%;
+}
+
+.account-form__button-child {
+	padding-top: 14px;
+	padding-bottom: 14px;
 }

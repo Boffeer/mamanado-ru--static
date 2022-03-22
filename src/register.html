@@ -1,93 +1,98 @@
 <extends src="src/layouts/base.html">
 	<block name="main">
-		<div class="container">
+		<div class="container form-account__container">
 			<form class="register-form form-account form">
 				<h1 class="form__title">Регистрация</h1>
 				<div class="register-form__left">
-					<fieldset>
-						<legend>Основные данные</legend>
-						<div class="form-account-input__wrap">
+					<fieldset class="input__fieldset register-form__fieldset">
+						<legend class="account-form__title">Основные данные</legend>
+						<div class="form-account-input__wrap input__wrap">
 							<input
 								class="input form-account-input"
 								name="first_name"
 								type="text"
-								placeholder="Имя"
 								required
 							/>
+							<label class="input__placeholder">Имя</label>
 						</div>
-						<div class="form-account-input__wrap">
+						<div class="form-account-input__wrap input__wrap">
 							<input
 								class="input form-account-input"
 								name="last_name"
 								type="text"
-								placeholder="Фамилия"
 								required
 							/>
+							<label class="input__placeholder">Фамилия</label>
 						</div>
-						<div class="form-account-input__wrap">
+						<div class="form-account-input__wrap input__wrap">
 							<input
 								class="input form-account-input"
 								name="email"
 								type="email"
-								placeholder="E-mail-адрес"
 								required
 							/>
+							<label class="input__placeholder">E-mail-адрес</label>
 						</div>
-						<div class="form-account-input__wrap">
+						<div class="form-account-input__wrap input__wrap">
 							<input
 								class="input form-account-input"
 								name="user-tel"
 								type="tel"
-								placeholder=""
 								maxlength="25"
 								minlength="10"
-								required
 								inputmode="numeric"
 							/>
+							<label class="input__placeholder">Телефон</label>
 						</div>
 					</fieldset>
-					<fieldset>
-						<legend>Ребенок</legend>
-						<div class="form-account-input__wrap">
+					<fieldset class="input__fieldset register-form__fieldset">
+						<legend class="account-form__title">Ребенок</legend>
+						<div class="form-account-input__wrap input__wrap">
 							<input
 								class="input form-account-input"
 								name="child_date[0]"
 								type="email"
-								placeholder="Дата рождения"
 								required
 							/>
+							<label class="input__placeholder">Дата рождения</label>
 						</div>
-						<div class="form-account-input__wrap">
+						<div class="form-account-input__wrap input__wrap">
 							<input
 								class="input form-account-input"
 								name="child_date[1]"
 								type="email"
-								placeholder="Дата рождения"
 								required
 							/>
+							<label class="input__placeholder">Дата рождения</label>
 						</div>
+						<button
+							type="button"
+							class="button button--thirdly account-form__button-child"
+						>
+							Добавить еще ребенка
+						</button>
 					</fieldset>
 				</div>
 				<div class="register-form__right">
-					<fieldset>
-						<legend>Пароль</legend>
-						<div class="form-account-input__wrap">
+					<fieldset class="input__fieldset register-form__fieldset">
+						<legend class="account-form__title">Пароль</legend>
+						<div class="form-account-input__wrap input__wrap">
 							<input
 								class="input form-account-input"
 								name="password"
 								type="password"
-								placeholder="Пароль"
 								required
 							/>
+							<label class="input__placeholder">Пароль</label>
 						</div>
-						<div class="form-account-input__wrap">
+						<div class="form-account-input__wrap input__wrap">
 							<input
 								class="input form-account-input"
 								name="password_repeat"
 								type="password"
-								placeholder="Повторите пароль"
 								required
 							/>
+							<label class="input__placeholder">Повторите пароль</label>
 						</div>
 					</fieldset>
 					<label class="form-privacy">
@@ -141,16 +146,18 @@
 							</a>
 						</p>
 					</label>
-				</div>
-				<button class="button button--primary login-form__submit">
-					Зарегистрироваться
-				</button>
-				<div class="login-form__links">
-					<a
-						href="login.html"
-						class="login-form__link login-form__link--primary"
-						>Уже есть аккаунт?</a
-					>
+					<div class="register-form__buttons">
+						<button class="button button--primary register-form__submit">
+							Зарегистрироваться
+						</button>
+						<div class="login-form__links">
+							<a
+								href="login.html"
+								class="login-form__link login-form__link--primary button button--thirdly"
+								>Уже есть аккаунт?</a
+							>
+						</div>
+					</div>
 				</div>
 			</form>
 		</div>

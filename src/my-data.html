@@ -7,36 +7,35 @@
 				<div class="account__content">
 					<h2 class="account__content-title">Мои данные</h2>
 					<form class="account-form__data">
-						<fieldset>
+						<fieldset class="input__fieldset">
 							<div class="input__wrap">
-								<small class="input__placeholder">Фамилия</small>
 								<input
 									class="input input--name"
 									name="first_name"
 									type="text"
 									maxlength="50"
 								/>
+								<label class="input__placeholder">Фамилия</label>
 							</div>
 							<div class="input__wrap">
-								<small class="input__placeholder">Имя</small>
 								<input
 									class="input input--name"
 									name="last_name"
 									type="text"
 									maxlength="50"
 								/>
+								<label class="input__placeholder">Имя</label>
 							</div>
 							<div class="input__wrap input__wrap--calendar">
-								<small class="input__placeholder">Дата рождения</small>
 								<input
 									class="input input--name"
 									name="user-name"
 									type="text"
 									maxlength="50"
 								/>
+								<label class="input__placeholder">Дата рождения</label>
 							</div>
 							<div class="input__wrap input__wrap--tel">
-								<small class="input__placeholder">Номер телефона</small>
 								<input
 									class="input input--phone"
 									name="tel"
@@ -47,6 +46,7 @@
 									required
 									inputmode="numeric"
 								/>
+								<label class="input__placeholder">Номер телефона</label>
 							</div>
 							<div class="input__wrap input__wrap--email">
 								<input
@@ -55,22 +55,31 @@
 									type="email"
 									required
 								/>
+								<label class="input__placeholder">E-mail адрес</label>
 							</div>
 						</fieldset>
 						<h3 class="account-form__title">Мои дети</h3>
-						<fieldset>
+						<fieldset class="input__fieldset">
 							<div class="input__wrap input__wrap--calendar">
-								<small class="input__placeholder">Дата рождения</small>
 								<input
 									class="input input--name"
 									name="user-name"
 									type="text"
 									maxlength="50"
 								/>
+								<label class="input__placeholder">Дата рождения</label>
 							</div>
-							<button class="button--thirdly">Добавить еще ребенка</button>
+							<button
+								type="button"
+								class="button button--thirdly account-form__button-child"
+							>
+								Добавить еще ребенка
+							</button>
 						</fieldset>
-						<button class="button button--primary account-form__data-submit">
+						<button
+							class="button button--primary account-form__data-submit"
+							type="button"
+						>
 							Сохранить
 						</button>
 					</form>
