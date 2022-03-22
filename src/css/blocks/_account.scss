@@ -5,6 +5,10 @@
 
 .account__title {
 	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.account__content {
+	width: 100%;
 }
 
 .account__nav {
@@ -90,4 +94,158 @@
 .wishlist__remove {
 	margin-left: 25px;
 	max-width: 130px;
+}
+
+// @addresses
+.account-addresses {
+	width: 100%;
+}
+.account-addresses__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 25px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.account-addresses__geo {
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 20px;
+	color: #444444;
+}
+.account-addresses__buttons {
+	max-width: 370px;
+	display: flex;
+	align-items: center;
+}
+
+.account-addresses__change {
+	max-width: 170px;
+}
+.account-addresses__remove {
+	margin-left: 35px;
+	max-width: 170px;
+}
+
+.account-addresses__form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 570px;
+	.input__wrap {
+		margin-bottom: 15px;
+		&:first-child {
+			// margin-right: 15px;
+		}
+	}
+	.input__wrap-half {
+		max-width: calc(25% - 20px);
+	}
+	.input__wrap:not(.input__wrap-half) {
+		max-width: calc(50% - 15px);
+		width: 100%;
+		.input {
+			max-width: 100%;
+		}
+	}
+}
+
+.account-addresses__form-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.account-promo__item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.account-promo__name {
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 20px;
+	margin-right: 30px;
+}
+
+.account-promo__code {
+	padding: 20px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #444444;
+	background: linear-gradient(
+			315deg,
+			rgba(0, 0, 0, 0.6) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#f0f1f5;
+	background-blend-mode: soft-light, normal;
+	box-shadow: inset -1.87227px -1.87227px 1.87227px rgba(255, 255, 255, 0.7),
+		inset 2.8084px 2.8084px 1.87227px rgba(174, 174, 192, 0.2);
+	border-radius: 7.48907px;
+}
+
+.account__personal-mailing {
+	display: flex;
+	align-items: center;
+	p {
+		max-width: 330px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		color: #444444;
+		margin-right: 30px;
+	}
+}
+
+// @promos
+.promos__page {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+// @orders
+.account-orders__columns {
+	display: grid;
+	grid-template-columns: 3.5fr 1.5fr repeat(3, 1fr);
+}
+
+.account-orders__heading {
+	margin-bottom: 20px;
+}
+.account-orders__header {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 120%;
+	color: #000000;
+}
+
+.account-orders__row {
+	margin-bottom: 25px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.account-orders__cell {
+	padding-top: 11px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 120%;
+	color: #444444;
+
+	&:first-child {
+		padding-top: 0;
+		margin-right: 30px;
+	}
+}
+.account-orders__cell.complete {
+	color: var(--c-valid);
 }

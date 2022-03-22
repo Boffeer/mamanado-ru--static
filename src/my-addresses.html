@@ -11,12 +11,18 @@
 							<p class="account-addresses__geo">
 								г. Красноярск, ул. Нарвская, д. 12, кв. 506
 							</p>
-							<button class="button button--primary account-addresses__chagne">
-								Изменить
-							</button>
-							<button class="button button--secondary button--danger">
-								Удалить
-							</button>
+							<div class="account-addresses__buttons">
+								<button
+									class="button button--primary account-addresses__change"
+								>
+									Изменить
+								</button>
+								<button
+									class="button button--secondary button--danger account-addresses__remove"
+								>
+									Удалить
+								</button>
+							</div>
 						</li>
 					</ul>
 					<button class="account-addresses__new button button--secondary">
@@ -25,49 +31,61 @@
 
 					<form class="account-addresses__form">
 						<div class="input__wrap">
-							<small class="input__placeholder">Город</small>
-							<input class="input" name="city" type="text" />
+							<input class="input" name="city" type="text" value="" />
+							<label class="input__placeholder">Город</label>
 						</div>
 						<div class="input__wrap">
-							<small class="input__placeholder">Улица</small>
-							<input class="input" name="city" type="text" />
+							<input
+								class="input"
+								name="city"
+								type="text"
+								value=""
+								required
+								minlength="1"
+							/>
+							<label class="input__placeholder">Улица</label>
 						</div>
 						<div class="input__wrap input__wrap-half">
-							<small class="input__placeholder">Дом</small>
 							<input
 								class="input"
 								name="city"
 								type="text"
 								inputmode="numeric"
 								required
+								minlength="1"
+								value=""
 							/>
+							<label class="input__placeholder">Дом</label>
 						</div>
 						<div class="input__wrap input__wrap-half">
-							<small class="input__placeholder">Строение</small>
 							<input
 								class="input"
 								name="city"
 								type="text"
 								inputmode="numeric"
+								value=""
 							/>
+							<label class="input__placeholder">Строение</label>
 						</div>
 						<div class="input__wrap input__wrap-half">
-							<small class="input__placeholder">Квартира</small>
 							<input
 								class="input"
 								name="city"
 								type="text"
 								inputmode="numeric"
+								value=""
 							/>
+							<label class="input__placeholder">Квартира</label>
 						</div>
 						<div class="input__wrap input__wrap-half">
-							<small class="input__placeholder">Домофон</small>
 							<input
 								class="input"
 								name="city"
 								type="text"
 								inputmode="numeric"
+								value=""
 							/>
+							<label class="input__placeholder">Домофон</label>
 						</div>
 						<div class="account-addresses__form-buttons">
 							<button class="button button--primary account-addresses__create">

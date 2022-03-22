@@ -149,6 +149,7 @@
 	line-height: 130%;
 	text-align: center;
 	border-radius: 10px;
+	transition: 0.25s all;
 }
 .button--primary {
 	color: #fff;
@@ -158,9 +159,70 @@
 	--button-color: #a1a1a1;
 	color: var(--button-color);
 	border: 1px solid var(--button-color);
+	&:hover {
+		color: #fff;
+		background-color: var(--button-color);
+		transition: 0.25s all;
+	}
 }
 .button--danger {
 	--button-color: #ee7979;
+}
+
+// @input
+.input__wrap {
+	position: relative;
+}
+.input__wrap-half {
+	max-width: calc(270px / 2);
+}
+.input {
+	display: block;
+	max-width: 270px;
+	width: 100%;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	padding-right: 20px;
+	padding-top: 25px;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #444444;
+
+	background: linear-gradient(
+			315deg,
+			rgba(0, 0, 0, 0.6) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#f0f1f5;
+	background-blend-mode: soft-light, normal;
+	box-shadow: inset -1.87227px -1.87227px 1.87227px rgba(255, 255, 255, 0.7),
+		inset 2.8084px 2.8084px 1.87227px rgba(174, 174, 192, 0.2);
+	border-radius: 7.48907px;
+}
+.input__placeholder {
+	position: absolute;
+	opacity: 0;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 16px;
+	line-height: 19px;
+	color: #a7a7a7;
+	transition: 0.25s all;
+}
+
+.input[value=""] ~ .input__placeholder {
+	opacity: 1;
+}
+.input:valid ~ .input__placeholder,
+.input:not([value=""]) ~ .input__placeholder,
+.input:not(:empty) ~ .input__placeholder,
+.input:focus ~ .input__placeholder {
+	opacity: 1;
+	top: 14px;
+	font-size: 12px;
 }
 
 // @type @title @text

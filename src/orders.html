@@ -13,26 +13,31 @@
 						<h3 class="account-orders__header">Итого</h3>
 						<h3 class="account-orders__header">Статус</h3>
 					</div>
-					<div class="account-orders__body account-orders__columns">
-						<div class="account-orders__row">
+					<div class="account-orders__body">
+						<div class="account-orders__row account-orders__columns">
 							<div class="account-orders__cell">
 								<include src="src/blocks/product-cell.html"></include>
 							</div>
 							<div class="account-orders__cell">3</div>
 							<div class="account-orders__cell">3500₽</div>
 							<div class="account-orders__cell">7500₽</div>
-							<div class="account-orders__cell comlete">Доставлено</div>
+							<div class="account-orders__cell complete">Доставлено</div>
 						</div>
-						<div class="account-orders__row">
+						<div class="account-orders__row account-orders__columns">
 							<div class="account-orders__cell">
 								<include src="src/blocks/product-cell.html"></include>
 							</div>
 							<div class="account-orders__cell">3</div>
 							<div class="account-orders__cell">3500₽</div>
 							<div class="account-orders__cell">7500₽</div>
-							<div class="account-orders__cell comlete">Доставлено</div>
+							<div class="account-orders__cell">В пути</div>
 						</div>
 					</div>
+
+					<p>У вас нет заказов</p>
+					<a href="#" class="button button--primary button__orders-catalog"
+						>Смотреть акции</a
+					>
 				</div>
 			</section>
 		</div>
