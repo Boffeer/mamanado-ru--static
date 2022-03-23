@@ -1,4 +1,4 @@
-<extends src="src/layouts/base.html">
+<extends src="src/layouts/base.html" locals='{"mainclass": "product__hero"}'>
 	<block name="main">
 		<section class="page__product product-detail">
 			<div class="container product-detail__container">
@@ -59,10 +59,10 @@
 							class="swiper-pagination proudct-details-thumbnails__pagination"
 						></div>
 						<div
-							class="swiper-button-prev proudct-details-thumbnails__button-prev"
+							class="swiper-button-prev product-details-thumbnails__button proudct-details-thumbnails__button-prev"
 						></div>
 						<div
-							class="swiper-button-next proudct-details-thumbnails__button-next"
+							class="swiper-button-next product-details-thumbnails__button proudct-details-thumbnails__button-next"
 						></div>
 					</div>
 					<!-- //proudct-details-thumbnails -->
@@ -142,84 +142,125 @@
 						<spn class="product-detail__price--old">1990₽</spn>
 					</p>
 					<div class="product-detail__options">
-						<div class="product-detail__size">
-							<p class="product-detail__options-name">Размеры:</p>
-							<div class="product-detail__size-list">
-								<label class="product-detail__size">
+						<div class="product-detail__size product-detail__radio">
+							<p
+								class="product-detail__options-name product-detail__radio-title"
+							>
+								Размеры:
+							</p>
+							<div
+								class="product-detail__size-list product-detail__radio-inner"
+							>
+								<label
+									class="product-detail__radio-button product-detail__size"
+								>
 									<input
+										name="size"
 										class="product-detail__size-input"
-										type="checkbox"
+										type="radio"
 										checked
 										required
 										hidden
+										value="29"
 									/>
-									<span class="product-detail__size-checkbox"></span>
-									<p class="product-detail__size-desc">29</p>
+									<span class="product-detail__size-checkbox">29</span>
 								</label>
-								<label class="product-detail__size">
+								<label
+									class="product-detail__radio-button product-detail__size"
+								>
 									<input
+										name="size"
 										class="product-detail__size-input"
-										type="checkbox"
-										checked
+										type="radio"
 										required
 										hidden
+										value="big"
 									/>
-									<span class="product-detail__size-checkbox"></span>
-									<p class="product-detail__size-desc">29.5</p>
+									<span class="product-detail__size-checkbox"
+										>Неожиданно большой</span
+									>
 								</label>
-								<label class="product-detail__size">
+								<label
+									class="product-detail__radio-button product-detail__size"
+								>
 									<input
+										name="size"
 										class="product-detail__size-input"
-										type="checkbox"
-										checked
+										type="radio"
 										required
 										hidden
+										value="29.5"
 									/>
-									<span class="product-detail__size-checkbox"></span>
-									<p class="product-detail__size-desc">29.5</p>
+									<span class="product-detail__size-checkbox">29.5</span>
 								</label>
-								<label class="product-detail__size">
+								<label
+									class="product-detail__radio-button product-detail__size"
+								>
 									<input
+										name="size"
 										class="product-detail__size-input"
-										type="checkbox"
-										checked
+										type="radio"
 										required
 										hidden
+										value="30"
 									/>
-									<span class="product-detail__size-checkbox"></span>
-									<p class="product-detail__size-desc">29.5</p>
+									<span class="product-detail__size-checkbox">30</span>
 								</label>
-								<label class="product-detail__size">
+								<label
+									class="product-detail__radio-button product-detail__size"
+								>
 									<input
+										name="size"
 										class="product-detail__size-input"
-										type="checkbox"
-										checked
+										type="radio"
 										required
 										hidden
+										value="30.5"
 									/>
-									<span class="product-detail__size-checkbox"></span>
-									<p class="product-detail__size-desc">29.5</p>
+									<span class="product-detail__size-checkbox">30.5</span>
 								</label>
-								<label class="product-detail__size">
+								<label
+									class="product-detail__radio-button product-detail__size"
+								>
 									<input
+										name="size"
 										class="product-detail__size-input"
-										type="checkbox"
-										checked
+										type="radio"
 										required
 										hidden
+										value="40"
 									/>
-									<span class="product-detail__size-checkbox"></span>
-									<p class="product-detail__size-desc">29.5</p>
+									<span class="product-detail__size-checkbox">40</span>
+								</label>
+								<label
+									class="product-detail__radio-button product-detail__size"
+								>
+									<input
+										name="size"
+										class="product-detail__size-input"
+										type="radio"
+										required
+										hidden
+										value="41"
+									/>
+									<span class="product-detail__size-checkbox">41</span>
 								</label>
 							</div>
 						</div>
-						<div class="product-detail__color">
-							<p class="product-detail__options-name">Цвет:</p>
-							<div class="product-detail__color-list">
-								<label class="product-detail__color">
+						<div class="product-detail__radio">
+							<p
+								class="product-detail__options-name product-detail__radio-title"
+							>
+								Цвет:
+							</p>
+							<div
+								class="product-detail__color-list product-detail__radio-inner"
+							>
+								<label class="product-detail__color" style="--color: #629dee">
 									<input
+										name="color"
 										class="product-detail__color-input"
-										type="checkbox"
+										type="radio"
 										checked
 										required
 										hidden
@@ -228,11 +269,11 @@
 										<span class="product-detail__color-checkbox-inner"> </span>
 									</span>
 								</label>
-								<label class="product-detail__color">
+								<label class="product-detail__color" style="--color: #ff4756">
 									<input
+										name="color"
 										class="product-detail__color-input"
-										type="checkbox"
-										checked
+										type="radio"
 										required
 										hidden
 									/>
@@ -240,11 +281,11 @@
 										<span class="product-detail__color-checkbox-inner"> </span>
 									</span>
 								</label>
-								<label class="product-detail__color">
+								<label class="product-detail__color" style="--color: #fed843">
 									<input
+										name="color"
 										class="product-detail__color-input"
-										type="checkbox"
-										checked
+										type="radio"
 										required
 										hidden
 									/>
@@ -272,12 +313,17 @@
 						<p>Есть в наличии</p>
 					</div>
 					<div class="product-detail__quantity-stepper control-stepper">
-						<button class="control-stepper__minus">−</button>
+						<button class="control-stepper__minus control-stepper__button">
+							−
+						</button>
 						<input
+							value="1"
 							type="text"
 							class="control-stepper__input product-detail__quantity"
 						/>
-						<button class="control-stepper__plus">+</button>
+						<button class="control-stepper__plus control-stepper__button">
+							+
+						</button>
 					</div>
 					<div class="product-detail__order">
 						<div class="product-detail__order-buttons">
@@ -285,7 +331,9 @@
 								Купить
 							</button>
 						</div>
-						<button class="product-detail__wishlist">
+						<button
+							class="product-detail__wishlist product-detail__wishlist--added"
+						>
 							<svg
 								width="22"
 								height="20"
@@ -308,16 +356,19 @@
 		<section class="product-details">
 			<div class="container product-details__container">
 				<div class="product-details__tabers">
-					<button data-tab="Общая информация" class="product-details__tabber">
+					<button data-tab="Общая информация" class="product-details__taber">
 						Общая информация
 					</button>
-					<button data-tab="Отзывы" class="product-details__tabber">
+					<button data-tab="Отзывы" class="product-details__taber">
 						Отзывы
 					</button>
-					<button data-tab="Характеристики" class="product-details__tabber">
+					<button
+						data-tab="Характеристики"
+						class="product-details__taber product-details__taber--active"
+					>
 						Характеристики
 					</button>
-					<button data-tab="Похожие товары" class="product-details__tabber">
+					<button data-tab="Похожие товары" class="product-details__taber">
 						Похожие товары
 					</button>
 				</div>
@@ -327,51 +378,69 @@
 						<h2 class="product-details__title">Характеристики</h2>
 						<div class="product-details__stats">
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Бренд</div>
+								<div class="product-details__stat-name">
+									<span>Бренд</span>
+								</div>
 								<div class="product-details__stat-value">Римма-кидс</div>
 							</div>
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Артикул</div>
+								<div class="product-details__stat-name">
+									<span>Артикул</span>
+								</div>
 								<div class="product-details__stat-value">12831923</div>
 							</div>
 							<div class="product-details__stat">
 								<div class="product-details__stat-name">
-									Размер обуви (стелька, см)
+									<span>Размер обуви (стелька, см)</span>
 								</div>
 								<div class="product-details__stat-value">29(19,5 см)</div>
 							</div>
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Пол ребёнка</div>
+								<div class="product-details__stat-name">
+									<span>Пол ребёнка</span>
+								</div>
 								<div class="product-details__stat-value">Мужской</div>
 							</div>
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Цвет производителя</div>
+								<div class="product-details__stat-name">
+									<span>Цвет производителя</span>
+								</div>
 								<div class="product-details__stat-value">Синий</div>
 							</div>
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Материал подошвы</div>
+								<div class="product-details__stat-name">
+									<span>Материал подошвы</span>
+								</div>
 								<div class="product-details__stat-value">ТПР</div>
 							</div>
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Подкладка</div>
+								<div class="product-details__stat-name">
+									<span>Подкладка</span>
+								</div>
 								<div class="product-details__stat-value">Мех</div>
 							</div>
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Сезон</div>
+								<div class="product-details__stat-name">
+									<span>Сезон</span>
+								</div>
 								<div class="product-details__stat-value">Зима</div>
 							</div>
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Назначение обуви</div>
+								<div class="product-details__stat-name">
+									<span>Назначение обуви</span>
+								</div>
 								<div class="product-details__stat-value">Для школы</div>
 							</div>
 							<div class="product-details__stat">
 								<div class="product-details__stat-name">
-									Страна производитель
+									<span>Страна производитель</span>
 								</div>
 								<div class="product-details__stat-value">Индия</div>
 							</div>
 							<div class="product-details__stat">
-								<div class="product-details__stat-name">Год коллекции</div>
+								<div class="product-details__stat-name">
+									<span>Год коллекции</span>
+								</div>
 								<div class="product-details__stat-value">2020</div>
 							</div>
 						</div>
@@ -380,7 +449,11 @@
 					<!-- reviews -->
 					<div data-tab="Отзывы" class="product-details__tab">
 						<div class="product-details__tab-top">
-							<h2 class="product-details__title">Всего отзывов: 12</h2>
+							<h2
+								class="product-details__title product-details__tab-reviews-title"
+							>
+								Всего отзывов: 12
+							</h2>
 							<button
 								class="button button--secondary product-details__add-review"
 							>
@@ -389,194 +462,142 @@
 							<form action="" class="product-details__reivew-form form">
 								<h3 class="form__title">Ваш отзыв</h3>
 								<div class="product-details-input__wrap">
-									<input
-										class="input"
+									<textarea
+										class="textarea"
 										name="product_like"
 										type="text"
 										placeholder="Плюсы товара"
+										rows="1"
 										required
-									/>
+									></textarea>
 								</div>
 								<div class="product-details-input__wrap">
-									<input
-										class="input"
+									<textarea
+										class="textarea"
 										name="product_dislike"
 										type="text"
+										rows="1"
 										placeholder="Минусы товара"
-									/>
+									></textarea>
 								</div>
-								<textarea name="product_review" class="textarea"></textarea>
-								<div class="product-details__starpicker starpicker">
-									<input
-										type="radio"
-										class="starpicker__star"
-										name="review"
-										value="1"
-										aria-label="Ужасно"
-									/>
-									<input
-										type="radio"
-										class="starpicker__star"
-										name="review"
-										value="2"
-										aria-label="Плохо"
-									/>
-									<input
-										type="radio"
-										class="starpicker__star"
-										name="review"
-										value="3"
-										aria-label="Нормально"
-									/>
-									<input
-										type="radio"
-										class="starpicker__star"
-										name="review"
-										value="4"
-										aria-label="Хорошо"
-									/>
-									<input
-										type="radio"
-										class="starpicker__star"
-										name="review"
-										value="5"
-										aria-label="Отлично"
-									/>
+								<div
+									class="product-details-input__wrap product-details-input__wrap--full"
+								>
+									<textarea
+										name="product_review"
+										class="textarea"
+										rows="4"
+										placeholder="Ваш отзыв"
+									></textarea>
 								</div>
+								<div class="product-details__starpicker-wrap starpciker__wrap">
+									<h3
+										class="product-details__starpicker-title starpicker__title"
+									>
+										Ваша оценка
+									</h3>
+									<div class="product-details__starpicker starpicker">
+										<input
+											type="radio"
+											class="starpicker__star"
+											name="review"
+											value="1"
+											aria-label="Ужасно"
+										/>
+										<input
+											type="radio"
+											class="starpicker__star"
+											name="review"
+											value="2"
+											aria-label="Плохо"
+										/>
+										<input
+											type="radio"
+											class="starpicker__star"
+											name="review"
+											value="3"
+											aria-label="Нормально"
+										/>
+										<input
+											type="radio"
+											class="starpicker__star"
+											name="review"
+											value="4"
+											aria-label="Хорошо"
+										/>
+										<input
+											type="radio"
+											class="starpicker__star"
+											name="review"
+											value="5"
+											aria-label="Отлично"
+										/>
+									</div>
+								</div>
+								<button class="button button--primary product__review-submit">
+									Оставить отзыв
+								</button>
 							</form>
-							<div class="product-details__tab-bottom">
-								<div class="product-details-reviews">
-									<article class="product-details__review review-card">
-										<div class="review-card__person">
-											<h3 class="review-card__name">Игорь Николаев</h3>
-											<p class="review-card__date">06.05.2020</p>
-											<div class="review-card__stars">
-												<div class="review-card__stars-count">4.0</div>
-												<div class="review-card__stars-display">
-													<svg
-														class="reviews-card__star"
-														width="12"
-														height="11"
-														viewBox="0 0 12 11"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M6.38562 0.106445L7.90261 3.75372L11.8402 4.06939L8.84016 6.63921L9.75671 10.4816L6.38562 8.42253L3.01454 10.4816L3.93108 6.63921L0.931093 4.06939L4.86863 3.75372L6.38562 0.106445Z"
-															fill="#179214"
-														/>
-													</svg>
-													<svg
-														class="reviews-card__star"
-														width="12"
-														height="11"
-														viewBox="0 0 12 11"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M6.38562 0.106445L7.90261 3.75372L11.8402 4.06939L8.84016 6.63921L9.75671 10.4816L6.38562 8.42253L3.01454 10.4816L3.93108 6.63921L0.931093 4.06939L4.86863 3.75372L6.38562 0.106445Z"
-															fill="#179214"
-														/>
-													</svg>
-													<svg
-														class="reviews-card__star"
-														width="12"
-														height="11"
-														viewBox="0 0 12 11"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M6.38562 0.106445L7.90261 3.75372L11.8402 4.06939L8.84016 6.63921L9.75671 10.4816L6.38562 8.42253L3.01454 10.4816L3.93108 6.63921L0.931093 4.06939L4.86863 3.75372L6.38562 0.106445Z"
-															fill="#179214"
-														/>
-													</svg>
-													<svg
-														class="reviews-card__star"
-														width="12"
-														height="11"
-														viewBox="0 0 12 11"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M6.38562 0.106445L7.90261 3.75372L11.8402 4.06939L8.84016 6.63921L9.75671 10.4816L6.38562 8.42253L3.01454 10.4816L3.93108 6.63921L0.931093 4.06939L4.86863 3.75372L6.38562 0.106445Z"
-															fill="#179214"
-														/>
-													</svg>
-													<svg
-														class="reviews-card__star reviews-card__star--empty"
-														width="12"
-														height="11"
-														viewBox="0 0 12 11"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M6.38562 0.106445L7.90261 3.75372L11.8402 4.06939L8.84016 6.63921L9.75671 10.4816L6.38562 8.42253L3.01454 10.4816L3.93108 6.63921L0.931093 4.06939L4.86863 3.75372L6.38562 0.106445Z"
-															fill="#179214"
-														/>
-													</svg>
-												</div>
-											</div>
-										</div>
-										<div class="review-card__feedback">
-											<h4 class="review-card__feedback-title">Плюсы</h4>
-											<p class="review-card__feedback-desc">
-												Время работы без подзарядки 2 недели. Зарядил за 1 час и
-												забыл про подзарядки. Если ставить на ночь "не
-												беспокоить" тогда и 3 смело будет держаться
-											</p>
-										</div>
-										<div class="review-card__feedback">
-											<h4 class="review-card__feedback-title">Минусы</h4>
-											<p class="review-card__feedback-desc">
-												Чутка подтормаживает система, с Самсунгом или с часами
-												от apple не сравнится.
-											</p>
-										</div>
-										<div class="review-card__feedback">
-											<h4 class="review-card__feedback-title">Отзыв</h4>
-											<p class="review-card__feedback-desc">
-												Покупали 2 месяца назад, пару раз зарядил. В целом
-												доволен, все что нужно из функционала хватает. Блютуз
-												тянет до 10 метров точно, работают в паре с Самсунгом
-												с9, приходится заряжать тел раза 2 в день из-за
-												постоянного сопряжения с телефоном. Вызовы на тел
-												приходят как и уведомления смс и приложений (если
-												настроить)
-											</p>
-										</div>
-									</article>
-									<button class="button button--secondary">Показать еще</button>
+						</div>
+						<div class="product-details__tab-bottom">
+							<div class="product-details-reviews">
+								<include src="src/blocks/review-card.html"></include>
+								<include src="src/blocks/review-card.html"></include>
+								<include src="src/blocks/review-card.html"></include>
+								<include src="src/blocks/review-card.html"></include>
+								<div class="button__aligner">
+									<button
+										class="button button--secondary product-details-reviews__more"
+									>
+										Показать еще
+									</button>
 								</div>
-								<div class="product-details-reviews-dash reviews-dash">
-									<div class="reviews-dash__row">
-										<p class="reviews-dash__name">5 звезд</p>
-										<div class="reviews-dash__chart"></div>
-										<p class="reviews-dash__total">5</p>
-									</div>
-									<div class="reviews-dash__row">
-										<p class="reviews-dash__name">4 звезды</p>
-										<div class="reviews-dash__chart"></div>
-										<p class="reviews-dash__total">0</p>
-									</div>
-									<div class="reviews-dash__row">
-										<p class="reviews-dash__name">3 звезды</p>
-										<div class="reviews-dash__chart"></div>
-										<p class="reviews-dash__total">0</p>
-									</div>
-									<div class="reviews-dash__row">
-										<p class="reviews-dash__name">2 звезды</p>
-										<div class="reviews-dash__chart"></div>
-										<p class="reviews-dash__total">0</p>
-									</div>
-									<div class="reviews-dash__row">
-										<p class="reviews-dash__name">1 звезда</p>
-										<div class="reviews-dash__chart"></div>
-										<p class="reviews-dash__total">0</p>
-									</div>
+							</div>
+							<div class="product-details-reviews-dash reviews-dash">
+								<div class="reviews-dash__row">
+									<p class="reviews-dash__name">5 звезд</p>
+									<progress
+										value="80"
+										max="100"
+										class="reviews-dash__chart"
+									></progress>
+									<p class="reviews-dash__total">5</p>
+								</div>
+								<div class="reviews-dash__row">
+									<p class="reviews-dash__name">4 звезды</p>
+									<progress
+										value="60"
+										max="100"
+										class="reviews-dash__chart"
+									></progress>
+									<p class="reviews-dash__total">0</p>
+								</div>
+								<div class="reviews-dash__row">
+									<p class="reviews-dash__name">3 звезды</p>
+									<progress
+										value="40"
+										max="100"
+										class="reviews-dash__chart"
+									></progress>
+									<p class="reviews-dash__total">0</p>
+								</div>
+								<div class="reviews-dash__row">
+									<p class="reviews-dash__name">2 звезды</p>
+									<progress
+										value="20"
+										max="100"
+										class="reviews-dash__chart"
+									></progress>
+									<p class="reviews-dash__total">0</p>
+								</div>
+								<div class="reviews-dash__row">
+									<p class="reviews-dash__name">1 звезда</p>
+									<progress
+										value="0"
+										max="100"
+										class="reviews-dash__chart"
+									></progress>
+									<p class="reviews-dash__total">0</p>
 								</div>
 							</div>
 						</div>
@@ -604,8 +625,10 @@
 							<include src="src/blocks/product-card.html"></include>
 							<include src="src/blocks/product-card.html"></include>
 						</div>
-						<div class="buttons__aligner">
-							<button class="button button--primary">
+						<div class="button__aligner">
+							<button
+								class="button button--primary product-details__similar-more"
+							>
 								Больше похожих товаров
 							</button>
 						</div>
