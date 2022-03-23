@@ -125,3 +125,19 @@
 		}
 	}
 }
+
+// @refund
+.refund__container {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 80px;
+}
+
+.refund__inner {
+	max-width: 568px;
+}
+
+.refund-form-input__wrap {
+	max-width: 350px;
+	margin-bottom: 15px;
+}

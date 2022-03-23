@@ -1,12 +1,13 @@
 <extends src="src/layouts/base.html">
 	<block name="main">
+		<include src="src/blocks/breadcrumbs.html"></include>
 		<section class="refund">
 			<div class="container refund__container">
 				<div class="refund__inner">
-					<h1 class="section__title"></h1>
-					<p class="section__decs">Дорогие друзья</p>
+					<h1 class="section__title page__title">Возврат</h1>
+					<p class="section__desc">Дорогие друзья</p>
 
-					<p class="section__decs">
+					<p class="section__desc">
 						Все, что мы делаем – мы делаем для Вас. Мы понимаем, что приобретая
 						товары через интернет-магазин, всегда есть риск, что Вам не
 						понравится цвет, не подойдет размер или фасон. Нам важно, чтобы
@@ -15,14 +16,14 @@
 						возврата товаров удобным и быстрым.
 					</p>
 
-					<p class="section__decs">
+					<p class="section__desc">
 						Если заказ выкупался из розничного магазина, и Вы хотите осуществить
 						возврат товара надлежащего качества, в течении 14 дней Вам
 						необходимо обратится в тот же магазин для осуществления возврата.
 						При себе иметь паспорт и чек.
 					</p>
 				</div>
-				<form class="refund-form form">
+				<form class="refund-form form form-callback">
 					<input type="text" name="form_page" hidden />
 					<input type="text" name="form_name" hidden />
 					<div class="refund-form-input__wrap refund-form-input__wrap--name">
@@ -35,18 +36,22 @@
 							required
 						/>
 					</div>
-					<div class="refund-form-input__wrap refund-form-input__wrap--email">
+					<div
+						class="input__wrap refund-form-input__wrap refund-form-input__wrap--email"
+					>
 						<input
-							class="refund-form-input refund-form-input--email"
+							class="input refund-form-input refund-form-input--email"
 							name="user_email"
 							type="email"
 							placeholder="Электронный адрес"
 							required
 						/>
 					</div>
-					<div class="refund-form-input__wrap refund-form-input__wrap--tel">
+					<div
+						class="input__wrap refund-form-input__wrap refund-form-input__wrap--tel"
+					>
 						<input
-							class="refund-form-input refund-form-input--phone"
+							class="input refund-form-input refund-form-input--phone"
 							name="user_tel"
 							type="tel"
 							placeholder="Телефон"
@@ -56,18 +61,20 @@
 							inputmode="numeric"
 						/>
 					</div>
-					<textarea
-						name="user_message"
-						class="textarea"
-						placeholder="Текст сообщения"
-						required
-					></textarea>
+					<div class="input__wrap refund-form-input__wrap">
+						<textarea
+							name="user_message"
+							class="textarea form-callback__textarea"
+							placeholder="Текст сообщения"
+							required
+						></textarea>
+					</div>
 					<button
-						class="button button--primary refund-form__submit form__submit"
+						class="button button--primary refund-form__submit form__submit form-callback__submit"
 					>
 						Отправить
 					</button>
-					<label class="form-privacy">
+					<label class="form-privacy form-callback__privacy">
 						<input
 							class="form-privacy__checkbox-hidden"
 							type="checkbox"
@@ -77,7 +84,7 @@
 						/>
 						<span class="form-privacy__checkbox"></span>
 						<p class="form-privacy__desc">
-							Согласен Нажимая на кнопку, Вы принимаете
+							Нажимая на кнопку, Вы принимаете <br />
 							<a href="#" class="form-privacy__desc-link">
 								условия политики конфиденциальности
 							</a>
