@@ -7,7 +7,7 @@
 	<h3 class="cart-table__header"></h3>
 </div>
 <div class="cart-table__body cart-table__columns">
-	<div class="cart-table__row">
+	<article class="cart-table__row">
 		<div class="cart-table__cell">
 			<include src="src/blocks/product-cell.html"></include>
 		</div>
@@ -19,6 +19,7 @@
 				<input
 					type="text"
 					class="control-stepper__input cart-table__quantity"
+					value="3"
 				/>
 				<button class="control-stepper__plus control-stepper__button">+</button>
 			</div>
@@ -35,12 +36,13 @@
 					<li>33</li>
 				</ul>
 			</div>
+			<button class="button button button--thirdly cart-table__remove">
+				Удалить из корзины
+				<span class="cart-table__remve-cross"></span>
+			</button>
 		</div>
-		<div class="cart-table__cell">
-			<button class="button button button--thirdly cart-table__remove"></button>
-		</div>
-	</div>
-	<div class="cart-table__row">
+	</article>
+	<article class="cart-table__row">
 		<div class="cart-table__cell">
 			<include src="src/blocks/product-cell.html"></include>
 		</div>
@@ -52,12 +54,27 @@
 				<input
 					type="text"
 					class="control-stepper__input cart-table__quantity"
+					value="3"
 				/>
 				<button class="control-stepper__plus control-stepper__button">+</button>
 			</div>
 		</div>
 		<div class="cart-table__cell">3500₽</div>
 		<div class="cart-table__cell">7500₽</div>
-		<div class="cart-table__cell comlete">Доставлено</div>
-	</div>
+		<div class="cart-table__cell">
+			<div class="bayan" data-bayan="absolute">
+				<p class="cart-table__size-current">34</p>
+				<ul class="cart-table__size-picker">
+					<li>30</li>
+					<li>31</li>
+					<li>32</li>
+					<li>33</li>
+				</ul>
+			</div>
+			<button class="button button button--thirdly cart-table__remove">
+				Удалить из корзины
+				<span class="cart-table__remve-cross"></span>
+			</button>
+		</div>
+	</article>
 </div>

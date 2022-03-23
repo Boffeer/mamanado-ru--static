@@ -10,6 +10,7 @@
 	--c-text-second: #a1a1a1;
 	--c-valid: #179214;
 	--c-favorite: #ff4756;
+	--c-danger: #ff4756;
 	--c-invalid: #ff4756;
 
 	--fz-regular: 18px;
@@ -63,3 +64,4 @@
 @import "blocks/account";
 @import "blocks/product-page";
 @import "blocks/cart";
+@import "blocks/checkout";

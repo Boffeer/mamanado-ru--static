@@ -1,0 +1,134 @@
+.cart__page {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.cart-table {
+	background: #ffffff;
+	box-shadow: 0px 14px 44px rgba(197, 197, 197, 0.25);
+	border-radius: 20px;
+	padding-top: 35px;
+	padding-bottom: 50px;
+}
+.cart-table__columns {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.cart-table__heading {
+	display: grid;
+	grid-template-columns: 3.5fr 1.5fr repeat(3, 1fr);
+	margin-bottom: 20px;
+}
+.cart-table__header {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 120%;
+	display: flex;
+	align-items: center;
+	color: #000000;
+}
+
+.cart-table__row {
+	display: grid;
+	grid-template-columns: 3.5fr 1.5fr repeat(3, 1fr);
+	align-items: center;
+	margin-bottom: 25px;
+}
+.cart-table__cell {
+	display: flex;
+	align-items: center;
+}
+
+.cart-table__body {
+	margin-bottom: 55px;
+}
+.cart-table__quantity-stepper {
+	margin-bottom: 0;
+}
+.cart-table__remove {
+	padding: 0;
+	font-size: 0;
+	width: 30px;
+	height: 30px;
+	background: #ffffff;
+	border-radius: 100%;
+	border: 1px solid #e0e0e0;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+	margin-left: auto;
+	&:after {
+		display: none;
+	}
+}
+.cart-table__remve-cross {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	transform: rotate(45deg);
+	transition: 0.25s all;
+	border-radius: 100%;
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		background-color: var(--c-danger);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&::before {
+		width: 2px;
+		height: 12px;
+	}
+	&::after {
+		width: 12px;
+		height: 2px;
+	}
+	&:hover {
+		background-color: var(--c-danger);
+		&::before,
+		&::after {
+			background-color: #fff;
+		}
+	}
+}
+
+.cart-table__footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 25px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-table__total {
+	max-width: 280px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.cart-table__total-title {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 27px;
+	color: #808080;
+}
+.cart-table__total-value {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 29px;
+	text-align: right;
+	color: #000000;
+}
+
+.button__cart-checkout {
+	max-width: 350px;
+}

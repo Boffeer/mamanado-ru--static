@@ -1,0 +1,117 @@
+.checkout-order {
+	// display: grid;
+	// grid-template-columns: repeat(2, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 50px;
+	background: #ffffff;
+	box-shadow: 0px 14px 44px rgba(197, 197, 197, 0.25);
+	border-radius: 20px;
+}
+
+.checkout-order__title {
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 36px;
+	color: #444444;
+	margin-bottom: 16px;
+}
+
+.checkout-shipping-group {
+	margin-bottom: 20px;
+}
+.checkout-shipping__title {
+	margin-bottom: 16px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #444444;
+	width: 100%;
+}
+
+.checkcout-shipping__form {
+	max-width: 300px;
+	flex-wrap: wrap;
+
+	.input__wrap:not(.input__wrap-half) {
+		max-width: 100%;
+	}
+	.input__wrap-half {
+		max-width: calc(50% - 11px);
+	}
+	.input {
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+}
+.checkout-shipping__caption {
+	display: block;
+	padding-top: 21px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #c8c8c8;
+}
+
+.checkout-order__column {
+	display: block;
+}
+.checkout-total {
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.checkout-total__title {
+	display: flex;
+	width: 100%;
+	font-size: 14px;
+	position: relative;
+	color: #a5a5a5;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+		display: block;
+		width: 100%;
+		height: 4px;
+		background-image: url("../img/product/dot.svg");
+		background-size: contain;
+		background-position: center;
+		background-repeat: repeat-x;
+	}
+	span {
+		display: block;
+		background-color: #fff;
+		position: relative;
+		z-index: 2;
+	}
+}
+.checkout-total__title {
+	max-width: 230px;
+	width: 100%;
+}
+
+.checkout-total__value {
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 30px;
+	text-align: right;
+	color: #444444;
+}
+
+.checkout-payment-group__title {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: #444444;
+	margin-bottom: 15px;
+}

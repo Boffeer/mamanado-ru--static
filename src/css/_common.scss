@@ -220,6 +220,7 @@
 	}
 }
 .button__aligner {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 }
@@ -298,6 +299,45 @@
 
 .input__wrap--calendar {
 	display: block;
+}
+
+// @radio
+.radio {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.radio__checkbox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #d1d1d1;
+	background-color: #fff;
+	border-radius: 100%;
+	min-width: 22px;
+	width: 22px;
+	height: 22px;
+	margin-right: 16px;
+	position: relative;
+	&:after {
+		content: "";
+		// position: absolute;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%);
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+	}
+}
+.radio__checkbox-hidden {
+	appearance: none;
+}
+.radio__checkbox-hidden:checked + .radio__checkbox:after {
+	background-color: var(--c-primary);
 }
 
 // @stepper
