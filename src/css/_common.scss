@@ -564,6 +564,40 @@
 	}
 }
 
+// @breadcrumbs
+.breadcrumbs {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.breadcrumbs__item {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+
+	display: inline;
+	border-bottom: 1px solid transparent;
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background-color: #000;
+		@include getmask(url("../img/common/angle-right.svg"));
+	}
+	&:hover {
+		.breadbcrumbs__link {
+			color: var(--c-primary);
+			border-bottom: 1px solid var(--c-primary);
+		}
+	}
+	&:last-child {
+		color: var(--c-primary);
+		&::after {
+			display: none;
+		}
+	}
+}
+
 // @type @title @text
 
 .section__title {
@@ -572,6 +606,9 @@
 	line-height: 120%;
 	color: #444444;
 	margin-bottom: 45px;
+}
+.page__title {
+	margin-bottom: 10px;
 }
 
 .account-form__title {

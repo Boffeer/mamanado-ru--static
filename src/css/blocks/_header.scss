@@ -153,9 +153,22 @@
 	display: flex;
 	// align-items: flex-start;
 	justify-content: space-between;
+	&.header-nav--opened::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.3);
+		z-index: 2;
+	}
 }
 .header-nav__tabbar {
 	margin-right: 20px;
+	position: relative;
+	z-index: 3;
 }
 .header-nav__tabber {
 	display: block;
@@ -180,6 +193,8 @@
 
 .header-nav__tabs {
 	width: 100%;
+	z-index: 3;
+	background: #fff;
 }
 .header-nav__dropdown {
 	// display: none;
@@ -213,6 +228,7 @@
 		left: 0;
 		top: 57px;
 		width: 100%;
+		z-index: 3;
 	}
 }
 .header-nav__category {
