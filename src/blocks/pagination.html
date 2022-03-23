@@ -1,14 +1,29 @@
 <div class="container pagination">
-	<button class="pagination__more button button--secondary">
-		Показать еще
-	</button>
+	<div class="button__aligner pagination__buttons">
+		<button class="pagination__button-more button button--secondary">
+			Показать еще
+		</button>
+	</div>
 	<div class="pagination__inner">
-		<a href="" class="pagination__prev">Назад</a>
-		<a href="" class="pagination__page">1</a>
-		<a href="" class="pagination__page">2</a>
-		<a href="" class="pagination__page">3</a>
-		<a href="" class="pagination__page">4</a>
-		<a href="" class="pagination__page">5</a>
-		<a href="" class="pagination__next">Вперед</a>
+		<a
+			href="#prev"
+			class="pagination__button--disabled pagination__button pagination__button--direction pagination__prev"
+			>Назад</a
+		>
+		<a
+			href="#2"
+			class="pagination__page--current pagination__button pagination__page"
+			>1</a
+		>
+		<a href="#3" class="pagination__button pagination__page">2</a>
+		<a href="#4" class="pagination__button pagination__page">3</a>
+		<span class="pagination__page pagination__page--break">...</span>
+		<a href="#25" class="pagination__button pagination__page">24</a>
+		<a href="#26" class="pagination__button pagination__page">25</a>
+		<a
+			href="#next"
+			class="pagination__button pagination__button--direction pagination__next"
+			>Вперед</a
+		>
 	</div>
 </div>

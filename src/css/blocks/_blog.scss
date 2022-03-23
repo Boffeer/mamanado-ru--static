@@ -3,6 +3,11 @@
 	padding-bottom: 80px;
 	background-color: #eff3f7;
 }
+.page__blog {
+	.blog {
+		background-color: #fff;
+	}
+}
 .blog__container {
 	display: flex;
 	justify-content: space-between;
