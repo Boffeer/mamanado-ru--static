@@ -1,38 +1,47 @@
 <extends src="src/layouts/base.html">
 	<block name="main">
+		<include src="src/blocks/breadcrumbs.html"></include>
 		<section class="warranty-page">
 			<div class="container warranty-page__container">
-				<h1 class="section__title">Гарантия</h1>
+				<h1 class="section__title page__title">Гарантия</h1>
 				<div class="section__columns-2">
 					<div class="section__column">
-						<p class="text--regular">
+						<p class="text--regular section__desc">
 							Гарантия на всю обувь 6 месяцев! Также напоминаем, что мы:
-							<ul>
-								<li>
-									Работаем с проверенными поставщиками
-								</li>
-								<li>
-									Всегда проверяем наличие сертификата у товара
-								</li>
-								<li>
-									Соблюдаем условия хранения
-								</li>
-								<li>
-									Берём на себя все обязательства в период гарантийного срока!
-								</li>
-							</ul>
 						</p>
+						<ul class="section__list">
+							<li>Работаем с проверенными поставщиками</li>
+							<li>Всегда проверяем наличие сертификата у товара</li>
+							<li>Соблюдаем условия хранения</li>
+							<li>
+								Берём на себя все обязательства в период гарантийного срока!
+							</li>
+						</ul>
 					</div>
 					<div class="section__column">
-						<p class="text--regular">
-							Если у Вас произошел гарантийный случай (при этом гарантийный срок не прошел) – Вам необходимо <a href="#refund">написать нам на форму обратной связи</a>, описать ситуацию и приложить фотографии товара. Сотрудник Центра Клиентской Поддержки свяжется с Вами в течение 2 рабочих дней.
+						<p class="text--regular section__desc">
+							Если у Вас произошел гарантийный случай (при этом гарантийный срок
+							не прошел) – Вам необходимо
+
+							<a class="link-regular" href="#refund"
+								>написать нам на форму обратной связи</a
+							>
+							, описать ситуацию и приложить фотографии товара. Сотрудник Центра
+							Клиентской Поддержки свяжется с Вами в течение 2 рабочих дней.
 						</p>
-						<p class="text--regular">
-							Интернет–магазин “Мама, надо!” не несет ответственности за возможный отказ и/или уклонение от гарантийных обязательств компанией - производителем товара.
+						<p class="text--regular section__desc">
+							Интернет–магазин “Мама, надо!” не несет ответственности за
+							возможный отказ и/или уклонение от гарантийных обязательств
+							компанией - производителем товара.
 						</p>
 					</div>
 				</div>
-				<picture class="warranty-page__pic"><img src="./img/info/warranty.png" alt="гарантия в магазине маманадо" class="warranty-page__img"></picture>
+				<picture class="warranty-page__pic"
+					><img
+						src="./img/info/warranty.png"
+						alt="гарантия в магазине маманадо"
+						class="warranty-page__img"
+				/></picture>
 			</div>
 		</section>
 	</block>

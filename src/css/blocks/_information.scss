@@ -141,3 +141,47 @@
 	max-width: 350px;
 	margin-bottom: 15px;
 }
+
+.shipping {
+	padding-bottom: 80px;
+	.section__desc {
+		max-width: 600px;
+	}
+}
+.shipping__lists {
+	padding-top: 40px;
+}
+
+.warranty-page__pic {
+	display: block;
+}
+.warranty-page__img {
+	display: block;
+	width: 100%;
+}
+
+.about-page__container {
+	display: flex;
+}
+.about-page__text {
+	max-width: 600px;
+	width: 100%;
+}
+.about-page__pic {
+	display: block;
+	margin-left: -150px;
+}
+.about-page__img {
+	width: 100%;
+	display: block;
+}
+.about-page__socials {
+	flex-direction: column;
+	align-items: flex-start;
+	.socials__title {
+		margin-bottom: 12px;
+	}
+	.socials__link:first-child {
+		margin-left: 0;
+	}
+}

@@ -614,6 +614,19 @@
 	color: #444444;
 	margin-bottom: 20px;
 }
+.section__list {
+	list-style: disc;
+	padding-left: 20px;
+}
+.section__list li {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 175.5%;
+	color: #444444;
+	&::marker {
+		margin-right: 5px;
+	}
+}
 .page__title {
 	margin-bottom: 10px;
 }
@@ -665,4 +678,13 @@
 }
 .form-callback__privacy {
 	padding-left: 25px;
+}
+
+.section__columns-2 {
+	columns: 2;
+	* {
+		break-inside: avoid;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
 }
