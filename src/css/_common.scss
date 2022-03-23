@@ -473,3 +473,11 @@
 	line-height: 24px;
 	margin-bottom: 18px;
 }
+
+.link-regular {
+	color: var(--c-primary);
+	border-bottom: 1px solid var(--c-primary-inactive);
+	&:hover {
+		border-bottom-color: var(--c-primary);
+	}
+}
