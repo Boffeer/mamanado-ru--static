@@ -208,7 +208,9 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding: 20px 15px;
+	// padding: 20px 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 	border-top: 1px solid rgba(2, 2, 2, 0.1);
 	border-bottom: 1px solid rgba(2, 2, 2, 0.1);
 	color: #444;
@@ -237,6 +239,8 @@
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 120%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .header-nav__title {

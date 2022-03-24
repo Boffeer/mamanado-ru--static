@@ -48,7 +48,62 @@ if (bayans.length > 0) {
       bayanObject.bayan.appendChild(bayanBottom);
       bayanObject.bottom.bayan = bayanBottom;
 
-      bayanTop.addEventListener("click", () => toggleBayan(bayanObject));
+      let bayanClickHandler = () => {
+        toggleBayan(bayanObject);
+      };
+
+      const bayansContianer = bayanObject.bayan.parentElement;
+      if (bayansContianer.classList.value.includes("bayan__wrapper--single")) {
+        bayanClickHandler = (event) => {
+          bayansContianer
+            .querySelectorAll(".bayan--opened")
+            .forEach((bayan, index) => {
+              bayan.querySelectorAll(".bayan__top").forEach((bayan) => {
+                const clickedItem = event.target.parentElement;
+                if (clickedItem != bayan) {
+                  bayan.click();
+                }
+              });
+            });
+          toggleBayan(bayanObject);
+        };
+      }
+
+      /**
+       * Open bayan on desktop hover
+       */
+      if (bayanObject.bayan.classList.value.includes("bayan--desktop-hover")) {
+        let hoverTimer;
+        let hoverTimerDelay = 100;
+        if (window.innerWidth > 1100) {
+          bayanObject.top.bayan.addEventListener("mouseover", (event) => {
+            function isBayanOpened() {
+              return bayanObject.bayan.classList.value.includes(
+                "bayan--opened"
+              );
+            }
+            function isHoveredSameBayan() {
+              return event.target.parentElement === bayanObject.top.bayan;
+            }
+            if (!isBayanOpened() && isHoveredSameBayan()) {
+              hoverTimer = setTimeout(() => {
+                bayanClickHandler(event);
+              }, hoverTimerDelay);
+            }
+          });
+          bayanObject.top.bayan.addEventListener("mouseout", (event) => {
+            clearInterval(hoverTimer);
+          });
+        }
+      }
+
+      window.addEventListener("click", (event) => {
+        // console.log(event.target);
+      });
+
+      bayanObject.top.bayan.addEventListener("click", (event) =>
+        bayanClickHandler(event)
+      );
 
       if (bayanObject.bayan.getAttribute("data-bayan")?.includes("absolute")) {
         bayanObject.bottom.bayan.style.position = "absolute";
