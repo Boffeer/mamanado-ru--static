@@ -5,20 +5,22 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "main": "index.js",
   "scripts": {
-    "cleanup": "rm -rf .parcel-cache dist",
+    "cleanup": "rm -rf .parcel-cache dist .cache",
     "dev": "npm run cleanup && parcel src/index.html",
     "dev2": "npm run cleanup && parcel src/index.html src/css/*.scss",
-    "build": "npx parcel build --no-minify src/index.html"
+    "build": "npx parcel build src/index.html --no-cache --no-minify --no-content-hash --public-url ./ --no-source-maps"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/config-default": "^2.4.0",
     "@parcel/transformer-sass": "^2.3.2",
     "autoprefixer": "^10.4.4",
     "editorconfig": "^0.15.3",
     "editorconfig-checker": "^4.0.2",
     "parcel": "^2.3.2",
     "parcel-bundler": "^1.12.5",
+    "parcel-namer-hashless": "^1.0.3",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",

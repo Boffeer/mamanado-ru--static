@@ -1,0 +1,15 @@
+import { Namer } from "@parcel/plugin";
+
+export default new Namer({
+  async name({ bundle, bundleGraph, logger, options }) {
+    if (bundle.filePath != null) {
+      return bundle.filePath;
+    }
+
+    let name = yourNamingFunction(bundle);
+    if (!bundle.isEntry) {
+      name += "." + bundle.hashReference;
+    }
+    return name + "." + bundle.type;
+  },
+});
