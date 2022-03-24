@@ -103,9 +103,11 @@ if (bayans.length > 0) {
             clearInterval(hoverTimer);
           });
         }
-        const hoverBayans = document.querySelectorAll(".bayan--desktop-hover");
-        hoverBayans.forEach((hoverBayan) => {
-          hoverBayan.addEventListener("mouseleave", () => {
+        const hoverBayanWrappers = document.querySelectorAll(
+          ".bayan__wrapper--hover"
+        );
+        hoverBayanWrappers.forEach((hoverBayanWrapper) => {
+          hoverBayanWrapper.addEventListener("mouseleave", () => {
             closeBayan(bayanObject);
           });
         });
