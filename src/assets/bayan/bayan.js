@@ -5,6 +5,16 @@ const bayans = [...document.querySelectorAll(".bayan")];
 const bayanOpenedClass = "bayan--opened";
 const bayanHeight = 1000;
 
+function openBayan(bayanObject) {
+  bayanObject.bottom.bayan.style.maxHeight = `${bayanHeight}px`;
+  bayanObject.top.bayan.parentElement.classList.add(bayanOpenedClass);
+}
+
+function closeBayan(bayanObject) {
+  bayanObject.bottom.bayan.style.maxHeight = "0";
+  bayanObject.top.bayan.parentElement.classList.remove(bayanOpenedClass);
+}
+
 function toggleBayan(bayanObject) {
   if (!bayanObject) return;
 
@@ -13,11 +23,9 @@ function toggleBayan(bayanObject) {
       bayanOpenedClass
     )
   ) {
-    bayanObject.bottom.bayan.style.maxHeight = "0";
-    bayanObject.top.bayan.parentElement.classList.remove(bayanOpenedClass);
+    closeBayan(bayanObject);
   } else {
-    bayanObject.bottom.bayan.style.maxHeight = `${bayanHeight}px`;
-    bayanObject.top.bayan.parentElement.classList.add(bayanOpenedClass);
+    openBayan(bayanObject);
   }
 }
 
@@ -95,11 +103,13 @@ if (bayans.length > 0) {
             clearInterval(hoverTimer);
           });
         }
+        const hoverBayans = document.querySelectorAll(".bayan--desktop-hover");
+        hoverBayans.forEach((hoverBayan) => {
+          hoverBayan.addEventListener("mouseleave", () => {
+            closeBayan(bayanObject);
+          });
+        });
       }
-
-      window.addEventListener("click", (event) => {
-        // console.log(event.target);
-      });
 
       bayanObject.top.bayan.addEventListener("click", (event) =>
         bayanClickHandler(event)
