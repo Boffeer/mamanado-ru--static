@@ -646,6 +646,10 @@
 	}
 }
 
+.branding:focus {
+	outline: 1px dotted var(--c-primary);
+}
+
 // @form-callback
 .form-callback {
 	max-width: 470px;

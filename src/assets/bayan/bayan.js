@@ -8,11 +8,17 @@ const bayanHeight = 1000;
 function openBayan(bayanObject) {
   bayanObject.bottom.bayan.style.maxHeight = `${bayanHeight}px`;
   bayanObject.top.bayan.parentElement.classList.add(bayanOpenedClass);
+  setTimeout(() => {
+    bayanObject.bottom.bayan.style.display = "block";
+  }, 200);
 }
 
 function closeBayan(bayanObject) {
   bayanObject.bottom.bayan.style.maxHeight = "0";
   bayanObject.top.bayan.parentElement.classList.remove(bayanOpenedClass);
+  setTimeout(() => {
+    bayanObject.bottom.bayan.style.display = "none";
+  }, 200);
 }
 
 function toggleBayan(bayanObject) {

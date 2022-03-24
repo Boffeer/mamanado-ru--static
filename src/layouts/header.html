@@ -1,11 +1,11 @@
-<header class="header">
+<header class="header" tabindex="1">
 	<div class="container header__container">
 		<button class="burger">
 			<span class="burger__line"></span>
 			<span class="burger__line"></span>
 			<span class="burger__line"></span>
 		</button>
-		<a href="#branding" class="branding header__branding hidden-desktop">
+		<a href="index.html" class="branding header__branding hidden-desktop">
 			<svg
 				width="88"
 				height="23"
@@ -100,7 +100,7 @@
 			</svg>
 		</a>
 		<div class="header-menu">
-			<a href="#branding" class="branding header__branding hidden-mobile">
+			<a href="index.html" class="branding header__branding hidden-mobile">
 				<svg
 					width="114"
 					height="30"
@@ -196,12 +196,26 @@
 			</a>
 			<div class="header__contacts">
 				<div class="header__geo bayan" data-bayan="absolute">
-					<div class="header__geo--current">Красноярск</div>
+					<button class="header__geo--current">Красноярск</button>
 					<ul class="header__geo-list">
-						<li class="header__geo-item header__geo-item--current">
-							Красноярск
+						<li class="header__geo-item">
+							<button
+								class="header__geo-button"
+								type="button"
+								aria-label="Выбрать город Улад-Удэ"
+							>
+								Красноярск
+							</button>
 						</li>
-						<li class="header__geo-item">Улан-Удэ</li>
+						<li class="header__geo-item">
+							<button
+								class="header__geo-button"
+								type="button"
+								aria-label="Выбрать город Улад-Удэ"
+							>
+								Улан-Удэ
+							</button>
+						</li>
 					</ul>
 				</div>
 				<div class="header__phones">
@@ -619,9 +633,10 @@
 			</div>
 		</nav>
 	</div>
-	<div class="search">
+	<form class="search">
 		<div class="search__wrap">
 			<input type="search" class="search__input" placeholder="Что ищете?" />
+			<button class="search__button">Найти</button>
 		</div>
-	</div>
+	</form>
 </header>

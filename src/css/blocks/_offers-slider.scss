@@ -59,18 +59,20 @@
 	color: transparent;
 	height: 86px;
 	width: 50px;
-	background-image: url("../img/common/angle-left-dumb.svg");
-	background-size: cover;
-	background-position: left;
-	background-repeat: no-repeat;
+	@include getmask(url("../img/common/angle-left-dumb.svg"));
+	background-color: var(--c-text-second);
+	&:hover {
+		background-color: var(--c-primary);
+	}
 }
 .offers-slider__button-next {
 	right: 0;
 	color: transparent;
 	height: 86px;
 	width: 50px;
-	background-image: url("../img/common/angle-right-dumb.svg");
-	background-size: cover;
-	background-position: right;
-	background-repeat: no-repeat;
+	@include getmask(url("../img/common/angle-right-dumb.svg"));
+	background-color: var(--c-text-second);
+	&:hover {
+		background-color: var(--c-primary);
+	}
 }
