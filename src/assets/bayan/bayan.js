@@ -103,14 +103,6 @@ if (bayans.length > 0) {
             clearInterval(hoverTimer);
           });
         }
-        const hoverBayanWrappers = document.querySelectorAll(
-          ".bayan__wrapper--hover"
-        );
-        hoverBayanWrappers.forEach((hoverBayanWrapper) => {
-          hoverBayanWrapper.addEventListener("mouseleave", () => {
-            closeBayan(bayanObject);
-          });
-        });
       }
 
       bayanObject.top.bayan.addEventListener("click", (event) =>
@@ -119,6 +111,13 @@ if (bayans.length > 0) {
 
       if (bayanObject.bayan.getAttribute("data-bayan")?.includes("absolute")) {
         bayanObject.bottom.bayan.style.position = "absolute";
+
+        const hoverBayanWrapper = bayanObject.bayan.parentElement;
+        // hoverBayanWrappers.forEach((hoverBayanWrapper) => {
+        hoverBayanWrapper.addEventListener("mouseleave", () => {
+          closeBayan(bayanObject);
+        });
+        // });
       }
     }
 
