@@ -2,6 +2,8 @@
 	padding-top: 80px;
 	padding-bottom: 80px;
 	background: #f7f5ef;
+	overflow: hidden;
+	max-width: 100%;
 }
 
 .partners__title {
@@ -9,6 +11,9 @@
 	margin-bottom: 50px;
 }
 
+.partners-slider {
+	overflow: visible;
+}
 .partners-slider__slide {
 	display: flex;
 	justify-content: center;
@@ -23,6 +28,13 @@
 .partners-slider__pic {
 	display: block;
 	margin-bottom: 20px;
+	width: 100%;
+}
+.partners-slider__img {
+	display: block;
+	width: 100%;
+	object-fit: contain;
+	height: 60px;
 }
 .partners-slider__name {
 	font-weight: 350;

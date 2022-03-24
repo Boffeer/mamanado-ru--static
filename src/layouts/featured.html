@@ -5,15 +5,51 @@
 			<button class="featured__button featured__button-prev"></button>
 			<button class="featured__button featured__button-next"></button>
 		</div>
-		<div class="featured__gallery gallery__scrollable--desktop">
-			<include src="src/blocks/product-card.html"></include>
-			<include src="src/blocks/product-card.html"></include>
-			<include src="src/blocks/product-card.html"></include>
-			<include src="src/blocks/product-card.html"></include>
-			<include src="src/blocks/product-card.html"></include>
-			<include src="src/blocks/product-card.html"></include>
-			<include src="src/blocks/product-card.html"></include>
-			<include src="src/blocks/product-card.html"></include>
+		<div class="featured__gallery">
+			<div class="swiper featured-slider featured__gallery--desktop">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide featured-slider-slide">
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+					<div class="swiper-slide featured-slider-slide">
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+					<div class="swiper-slide featured-slider-slide">
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+					<div class="swiper-slide featured-slider-slide">
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+					<div class="swiper-slide featured-slider-slide">
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+					<div class="swiper-slide featured-slider-slide">
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+					<div class="swiper-slide featured-slider-slide">
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+					<div class="swiper-slide featured-slider-slide">
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+				</div>
+			</div>
+			<div class="featured__gallery--mobile">
+				<include src="src/blocks/product-card.html"></include>
+				<include src="src/blocks/product-card.html"></include>
+				<include src="src/blocks/product-card.html"></include>
+				<include src="src/blocks/product-card.html"></include>
+				<include src="src/blocks/product-card.html"></include>
+				<include src="src/blocks/product-card.html"></include>
+				<include src="src/blocks/product-card.html"></include>
+				<include src="src/blocks/product-card.html"></include>
+				<include src="src/blocks/product-card.html"></include>
+			</div>
+			<div class="button__aligner">
+				<button class="button button--secondary featured__button-more">
+					Показать еще
+				</button>
+			</div>
 		</div>
 	</div>
 </section>

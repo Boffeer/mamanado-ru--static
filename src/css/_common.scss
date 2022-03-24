@@ -233,6 +233,44 @@
 	display: flex;
 	justify-content: center;
 }
+.slider__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	background: #ffffff;
+	box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.2);
+	width: 44px;
+	&::after {
+		content: "";
+		width: 47px;
+		height: 47px;
+		display: block;
+		background-color: var(--c-primary);
+	}
+}
+.slider__button-prev::after {
+	@include getmask(url("../img/common/arrow-left.svg"));
+}
+.slider__button-next::after {
+	@include getmask(url("../img/common/arrow-right.svg"));
+}
+.slider__pagination {
+	position: static;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+
+	.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+		opacity: 0.5;
+	}
+	.swiper-pagination-bullet,
+	.swiper-pagination-bullet-active {
+		background: var(--c-primary);
+	}
+}
 
 // @input
 .input__wrap {

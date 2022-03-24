@@ -30,15 +30,20 @@
 	border-radius: 20px;
 }
 .shops-addresses--active {
-	border: 1px solid #7486c7;
+	border: 1px solid var(--c-primary);
+}
+.shops-addresses__adress:hover {
+	color: var(--c-primary);
 }
 
 .shops-addresses__location {
 	display: flex;
+	align-items: center;
 	margin-bottom: 20px;
 }
 .shops-addresses__time {
 	display: flex;
+	align-items: center;
 }
 
 .shops-addresses__icon {
@@ -52,4 +57,23 @@
 	overflow: hidden;
 	filter: drop-shadow(0px 14px 44px rgba(197, 197, 197, 0.25));
 	border-radius: 20px;
+	max-width: 670px;
+	width: 100%;
+}
+
+.shops__map-placeholder {
+	max-width: 100%;
+	width: 100%;
+}
+.shops__map-placeholder--hidden {
+	display: none;
+}
+.shops__map-iframe {
+	max-width: 100%;
+	width: 100%;
+	display: none;
+	height: 100%;
+}
+.shops__map-iframe--active {
+	display: block;
 }
