@@ -34,42 +34,18 @@
 	justify-content: space-between;
 }
 .featured__button {
+	font-size: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	// width: 67px;
-	// height: 67px;
-	padding: 12px;
+	min-width: 70px;
 	border-radius: 100%;
 	background: #ffffff;
 	box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.2);
 	&::after {
-		width: 47px;
-		height: 47px;
+		height: 70px;
 	}
 }
 .featured__button-prev {
 	margin-right: 35px;
-	&::after {
-		content: "";
-		display: block;
-		// width: 80%;
-		// height: 80%;
-		background-image: url("../img/common/arrow-left.svg");
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-}
-.featured__button-next {
-	&::after {
-		content: "";
-		display: block;
-		// width: 80%;
-		// height: 80%;
-		background-image: url("../img/common/arrow-right.svg");
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
 }

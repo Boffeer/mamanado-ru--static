@@ -8,6 +8,9 @@ const bayanHeight = 1000;
 function openBayan(bayanObject) {
   bayanObject.bottom.bayan.style.maxHeight = `${bayanHeight}px`;
   bayanObject.top.bayan.parentElement.classList.add(bayanOpenedClass);
+  bayanObject.bottom.bayan.querySelectorAll("a").forEach((anchor) => {
+    anchor.setAttribute("tabindex", "0");
+  });
   setTimeout(() => {
     bayanObject.bottom.bayan.style.display = "block";
   }, 200);
@@ -16,6 +19,9 @@ function openBayan(bayanObject) {
 function closeBayan(bayanObject) {
   bayanObject.bottom.bayan.style.maxHeight = "0";
   bayanObject.top.bayan.parentElement.classList.remove(bayanOpenedClass);
+  bayanObject.bottom.bayan.querySelectorAll("a").forEach((anchor) => {
+    anchor.setAttribute("tabindex", "-1");
+  });
   setTimeout(() => {
     bayanObject.bottom.bayan.style.display = "none";
   }, 200);

@@ -72,6 +72,7 @@
 	width: 50px;
 	@include getmask(url("../img/common/angle-right-dumb.svg"));
 	background-color: var(--c-text-second);
+	&:focus,
 	&:hover {
 		background-color: var(--c-primary);
 	}

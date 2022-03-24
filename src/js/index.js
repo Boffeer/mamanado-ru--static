@@ -45,7 +45,10 @@ let headerStocks = new Swiper(".header-stocks", {
 });
 
 let offersSlider = new Swiper(".offers-slider", {
-  loop: true,
+  // loop: true,
+  a11y: {
+    enabled: false,
+  },
   grabCursor: true,
   effect: "creative",
   creativeEffect: {

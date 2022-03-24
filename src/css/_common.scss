@@ -241,12 +241,21 @@
 	background: #ffffff;
 	box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.2);
 	width: 44px;
+	transition: 0.25s all;
 	&::after {
 		content: "";
 		width: 47px;
 		height: 47px;
 		display: block;
 		background-color: var(--c-primary);
+	}
+	&:focus,
+	&:hover {
+		background-color: var(--c-primary);
+		transform: scale(1.2);
+		&::after {
+			background-color: #fff;
+		}
 	}
 }
 .slider__button-prev::after {
@@ -729,4 +738,8 @@
 		column-break-inside: avoid;
 		-webkit-column-break-inside: avoid;
 	}
+}
+
+*:focus {
+	outline: 3px solid red !important;
 }

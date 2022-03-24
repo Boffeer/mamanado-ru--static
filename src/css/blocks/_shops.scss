@@ -32,8 +32,18 @@
 .shops-addresses--active {
 	border: 1px solid var(--c-primary);
 }
-.shops-addresses__adress:hover {
-	color: var(--c-primary);
+.shops-addresses__adress {
+	&:focus,
+	&:hover {
+		color: var(--c-primary);
+	}
+}
+.shop-addresses__item {
+	cursor: pointer;
+	&:focus,
+	&:hover {
+		outline: 3px solid var(--c-primary);
+	}
 }
 
 .shops-addresses__location {
