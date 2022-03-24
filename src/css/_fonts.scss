@@ -1,26 +1,20 @@
-@font-face {
-	src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-		url("../fonts/Montserrat-Regular.woff") format("woff");
-	font-family: "Montserrat";
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+@mixin get-ff($fontname, $weight) {
+	@font-face {
+		src: url("../fonts/#{$fontname}.woff2") format("woff2"),
+			url("../fonts/#{$fontname}.woff") format("woff");
+		font-family: "Montserrat";
+		font-weight: $weight;
+		font-style: normal;
+		font-display: swap;
+	}
 }
 
-@font-face {
-	src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
-		url("../fonts/Montserrat-SemiBold.woff") format("woff");
-	font-family: "Montserrat";
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-		url("../fonts/Montserrat-Bold.woff") format("woff");
-	font-family: "Montserrat";
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+@include get-ff("Montserrat-Thin", 100);
+@include get-ff("Montserrat-ExtraLight", 200);
+@include get-ff("Montserrat-Light", 300);
+@include get-ff("Montserrat-Regular", 400);
+@include get-ff("Montserrat-Medium", 500);
+@include get-ff("Montserrat-SemiBold", 600);
+@include get-ff("Montserrat-Bold", 700);
+@include get-ff("Montserrat-ExtraBold", 800);
+@include get-ff("Montserrat-Black", 900);
