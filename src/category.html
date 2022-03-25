@@ -1,0 +1,173 @@
+<extends src="src/layouts/base.html">
+	<block name="main">
+		<include src="src/blocks/breadcrumbs.html"></include>
+		<div class="container">
+			<div class="category__heading">
+				<h1 class="section__title catalog__title">Зимняя обувь</h1>
+				<span class="category__count-items"> 1244 товара </span>
+			</div>
+			<nav class="category__subcategories">
+				<div
+					class="swiper-button-prev category-subcategories__button-prev slider__button slider__button-prev"
+				></div>
+				<div class="swiper category-subcategories">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide category-subcategories-slide">
+							<button
+								type="button"
+								class="category__subcategory category__subcategory--active"
+							>
+								Сноубутсы
+							</button>
+						</div>
+						<div class="swiper-slide category-subcategories-slide">
+							<button type="button" class="category__subcategory">
+								Мембранная обувь
+							</button>
+						</div>
+						<div class="swiper-slide category-subcategories-slide">
+							<button type="button" class="category__subcategory">
+								Ботинки
+							</button>
+						</div>
+						<div
+							type="button"
+							class="swiper-slide category-subcategories-slide"
+						>
+							<button class="category__subcategory">Валенки</button>
+						</div>
+						<div class="swiper-slide category-subcategories-slide">
+							<button type="button" class="category__subcategory">
+								Сапожки
+							</button>
+						</div>
+						<div class="swiper-slide category-subcategories-slide">
+							<button type="button" class="category__subcategory">
+								Унтоваленки
+							</button>
+						</div>
+						<div class="swiper-slide category-subcategories-slide">
+							<button type="button" class="category__subcategory">Угги</button>
+						</div>
+						<div class="swiper-slide category-subcategories-slide">
+							<button type="button" class="category__subcategory">
+								Валенки
+							</button>
+						</div>
+						<div class="swiper-slide category-subcategories-slide">
+							<button type="button" class="category__subcategory">
+								Сапожки
+							</button>
+						</div>
+					</div>
+				</div>
+				<div
+					class="swiper-button-next category-subcategories__button-next slider__button slider__button-next"
+				></div>
+			</nav>
+			<section class="category__page">
+				<aside class="filter__wrap">
+					<button class="button button--thirdly filter__show">
+						<span>Фильтры</span>
+					</button>
+					<form class="filter catalog__filter">
+						<h3 class="filter__category-name">Зимняя обувь</h3>
+						<ul class="filter__list">
+							<li class="bayan filter__item">
+								<div class="filter__name">Скидка</div>
+								<div class="filter__values">
+									<label class="filter__value radio">
+										<input
+											class="radio__checkbox-hidden"
+											type="radio"
+											name="shipping_medhod"
+											value=""
+											checked
+										/>
+										<span class="radio__checkbox"></span>
+										<p class="radio__label">до 10%</p>
+									</label>
+									<label class="filter__value radio">
+										<input
+											class="radio__checkbox-hidden"
+											type="radio"
+											name="shipping_medhod"
+											value=""
+										/>
+										<span class="radio__checkbox"></span>
+										<p class="radio__label">до 30%</p>
+									</label>
+									<label class="filter__value radio">
+										<input
+											class="radio__checkbox-hidden"
+											type="radio"
+											name="shipping_medhod"
+											value=""
+										/>
+										<span class="radio__checkbox"></span>
+										<p class="radio__label">до 40%</p>
+									</label>
+								</div>
+							</li>
+							<li class="bayan filter__item">
+								<div class="filter__name">Материал</div>
+								<div class="filter__values">
+									<label class="filter__value checkbox">
+										<input
+											class="checkbox__checkbox-hidden"
+											type="checkbox"
+											name="material"
+											value=""
+										/>
+										<span class="checkbox__checkbox"></span>
+										<p class="checkbox__label">Кожа</p>
+									</label>
+									<label class="filter__value checkbox">
+										<input
+											class="checkbox__checkbox-hidden"
+											type="checkbox"
+											name="material"
+											value=""
+										/>
+										<span class="checkbox__checkbox"></span>
+										<p class="checkbox__label">Ткань</p>
+									</label>
+									<label class="filter__value checkbox">
+										<input
+											class="checkbox__checkbox-hidden"
+											type="checkbox"
+											name="material"
+											value=""
+										/>
+										<span class="checkbox__checkbox"></span>
+										<p class="checkbox__label">Экокожа</p>
+									</label>
+								</div>
+							</li>
+						</ul>
+						<button class="button button--primary filers__button-use">
+							Применить
+						</button>
+					</form>
+				</aside>
+				<div class="category__catalog-wrap">
+					<div class="category__catalog">
+						<include src="src/blocks/product-card.html"></include>
+						<include src="src/blocks/product-card.html"></include>
+						<include src="src/blocks/product-card.html"></include>
+						<include src="src/blocks/product-card.html"></include>
+						<include src="src/blocks/product-card.html"></include>
+						<include src="src/blocks/product-card.html"></include>
+						<include src="src/blocks/product-card.html"></include>
+						<include src="src/blocks/product-card.html"></include>
+						<include src="src/blocks/product-card.html"></include>
+					</div>
+					<include src="src/blocks/pagination.html"></include>
+				</div>
+			</section>
+		</div>
+	</block>
+	<block name="scripts">
+		<script src="js/category.js"></script>
+	</block>
+</extends>

@@ -127,7 +127,7 @@ if (bayans.length > 0) {
         const hoverBayanWrapper = bayanObject.bayan.parentElement;
         // hoverBayanWrappers.forEach((hoverBayanWrapper) => {
         hoverBayanWrapper.addEventListener("mouseleave", () => {
-          // closeBayan(bayanObject);
+          closeBayan(bayanObject);
         });
         // });
       }
