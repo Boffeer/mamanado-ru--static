@@ -187,7 +187,12 @@
 }
 .button--primary {
 	color: #fff;
-	background: #7486c7;
+	background: var(--c-primary);
+	&:focus,
+	&:hover {
+		background: var(--c-primary-inactive);
+		color: #fff;
+	}
 }
 .button--secondary {
 	--button-color: #a1a1a1;
@@ -234,6 +239,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 .slider__button {
 	display: flex;
@@ -924,4 +930,40 @@
 	.filter__show {
 		display: flex;
 	}
+}
+
+.pop-success {
+	background: #ffffff;
+	box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.02);
+	border-radius: 10px;
+	max-width: 540px;
+	padding: 30px;
+}
+.pop-success__title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 120%;
+	color: #444444;
+	text-transform: uppercase;
+	margin-bottom: 22px;
+	text-align: center;
+}
+.pop-success__icon {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60px;
+	height: 60px;
+	margin-bottom: 20px;
+	background-image: url("../img/common/success.svg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.pop-cussess__checkout {
+	font-size: 16px;
+}
+.pop-success__continue {
+	font-size: 16px;
+	margin-right: 16px;
+	--button-color: var(--c-primary);
 }

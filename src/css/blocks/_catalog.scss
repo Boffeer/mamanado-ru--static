@@ -126,3 +126,36 @@
 	width: 100%;
 	margin-bottom: 40px;
 }
+
+.catalog-size-picker {
+	background: #ffffff;
+	box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.02);
+	border-radius: 10px;
+	max-width: 370px;
+	width: 100%;
+}
+.catalog-size-picker__title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 120%;
+	color: #444444;
+	padding: 23px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.catalog-size-picker__size {
+	display: block;
+	width: 100%;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 120%;
+	color: #444444;
+	padding: 23px;
+	border-bottom: 1px solid #e0e0e0;
+	text-align: left;
+	&:last-child {
+		border-bottom: none;
+	}
+	&:hover {
+		background-color: #f8f8f8;
+	}
+}
