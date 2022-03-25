@@ -141,56 +141,148 @@ let mapsIframes = mapsIds.map((map) => {
 });
 
 const shopsSection = document.querySelector(".shops");
-const shopsPlaceholder = document.querySelector(".shops__map-placeholder");
-const shopsIframe = document.querySelector(".shops__map-iframe");
 
-let isPlaceholderLoaded = false;
-const placeholderSrc = yMapImgBegin + mapsIds[0] + yMapImgEnd;
-window.addEventListener("scroll", () => {
-  if (isPlaceholderLoaded) return;
+if (shopsSection) {
+  const shopsPlaceholder = document.querySelector(".shops__map-placeholder");
+  const shopsIframe = document.querySelector(".shops__map-iframe");
 
-  const pixlesUntill = shopsSection.getBoundingClientRect().top;
-  if (pixlesUntill > 1000) return;
-  isPlaceholderLoaded = true;
+  let isPlaceholderLoaded = false;
+  const placeholderSrc = yMapImgBegin + mapsIds[0] + yMapImgEnd;
+  window.addEventListener("scroll", () => {
+    if (isPlaceholderLoaded) return;
 
-  shopsPlaceholder.setAttribute("src", placeholderSrc);
-});
+    const pixlesUntill = shopsSection.getBoundingClientRect().top;
+    if (pixlesUntill > 1000) return;
+    isPlaceholderLoaded = true;
 
-mapsButtons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    if (button.classList.contains("shops-addresses--active")) return;
-
-    mapsButtons.forEach((button) => {
-      button.classList.remove("shops-addresses--active");
-    });
-    button.classList.add("shops-addresses--active");
-    shopsIframe.classList.add("shops__map-iframe--active");
-    shopsPlaceholder.classList.add("shops__map-placeholder--hidden");
-
-    const iframeSrc = mapsIframes[index];
-    shopsIframe.setAttribute("src", iframeSrc);
+    shopsPlaceholder.setAttribute("src", placeholderSrc);
   });
-  const href = yMapHrefBegin + mapsIds[index] + yMapIframeEnd;
-  button.querySelector(".shops-addresses__location").setAttribute("href", href);
-});
 
-const mapOptions = {
-  once: true, //запуск один раз, и удаление наблюдателя сразу
-  passive: true,
-  capture: true,
-};
+  mapsButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      if (button.classList.contains("shops-addresses--active")) return;
 
-let isMapLoaded = false;
-function startLazyMap() {
-  if (isMapLoaded) return;
+      mapsButtons.forEach((button) => {
+        button.classList.remove("shops-addresses--active");
+      });
+      button.classList.add("shops-addresses--active");
+      shopsIframe.classList.add("shops__map-iframe--active");
+      shopsPlaceholder.classList.add("shops__map-placeholder--hidden");
 
-  isMapLoaded = true;
-  shopsIframe.setAttribute("src", mapsIframes[0]);
-  shopsPlaceholder.classList.add("shops__map-placeholder--hidden");
-  shopsIframe.classList.add("shops__map-iframe--active");
+      const iframeSrc = mapsIframes[index];
+      shopsIframe.setAttribute("src", iframeSrc);
+    });
+    const href = yMapHrefBegin + mapsIds[index] + yMapIframeEnd;
+    button
+      .querySelector(".shops-addresses__location")
+      .setAttribute("href", href);
+  });
+
+  const mapOptions = {
+    once: true, //запуск один раз, и удаление наблюдателя сразу
+    passive: true,
+    capture: true,
+  };
+
+  let isMapLoaded = false;
+  function startLazyMap() {
+    if (isMapLoaded) return;
+
+    isMapLoaded = true;
+    shopsIframe.setAttribute("src", mapsIframes[0]);
+    shopsPlaceholder.classList.add("shops__map-placeholder--hidden");
+    shopsIframe.classList.add("shops__map-iframe--active");
+  }
+
+  shopsPlaceholder.addEventListener("click", startLazyMap, mapOptions);
+  shopsPlaceholder.addEventListener("mouseover", startLazyMap, mapOptions);
+  shopsPlaceholder.addEventListener("touchstart", startLazyMap, mapOptions);
+  shopsPlaceholder.addEventListener("touchmove", startLazyMap, mapOptions);
 }
 
-shopsPlaceholder.addEventListener("click", startLazyMap, mapOptions);
-shopsPlaceholder.addEventListener("mouseover", startLazyMap, mapOptions);
-shopsPlaceholder.addEventListener("touchstart", startLazyMap, mapOptions);
-shopsPlaceholder.addEventListener("touchmove", startLazyMap, mapOptions);
+// @stepper
+const steppers = document.querySelectorAll(".control-stepper");
+
+if (steppers) {
+  steppers.forEach((stepper) => {
+    const minus = stepper.querySelector(".control-stepper__minus ");
+    const input = stepper.querySelector(".control-stepper__input ");
+    const plus = stepper.querySelector(".control-stepper__plus ");
+
+    let inputMinExtremum = +input.getAttribute("data-min");
+    let inputMaxExtremum = +input.getAttribute("data-max");
+
+    let isMinusDisabled = false;
+    let isPlusDisabled = false;
+
+    let currentValue = input.value;
+    optionalExtremums(currentValue);
+
+    function checkExtremums(currentValue) {
+      if (+currentValue <= inputMinExtremum + 1) {
+        minus.setAttribute("disabled", "disabled");
+        isMinusDisabled = true;
+      } else {
+        minus.removeAttribute("disabled");
+        isMinusDisabled = false;
+      }
+      if (+currentValue > inputMaxExtremum - 1) {
+        plus.setAttribute("disabled", "disabled");
+        isPlusDisabled = true;
+      } else {
+        plus.removeAttribute("disabled");
+        isPlusDisabled = false;
+      }
+    }
+    function optionalExtremums(currentValue) {
+      if (!(inputMinExtremum && inputMaxExtremum)) {
+        inputMaxExtremum = 999;
+        inputMinExtremum = 0;
+      }
+
+      checkExtremums(currentValue);
+    }
+
+    function makeDecrement() {
+      if (isMinusDisabled) return;
+
+      +currentValue--;
+      input.value = currentValue;
+      optionalExtremums(currentValue);
+    }
+
+    function makeIncrement() {
+      if (isPlusDisabled) return;
+      +currentValue++;
+      input.value = currentValue;
+      optionalExtremums(currentValue);
+    }
+
+    function inputHandler() {
+      let currentInput = input.value;
+      currentInput = currentInput.replace(/\D+/g, "");
+
+      if (currentInput > inputMaxExtremum) {
+        input.value = inputMaxExtremum;
+        currentValue = inputMaxExtremum;
+        optionalExtremums(currentValue);
+        return;
+      }
+      if (currentInput < inputMinExtremum) {
+        input.value = inputMinExtremum;
+        currentValue = inputMinExtremum;
+        optionalExtremums(currentValue);
+        return;
+      }
+
+      currentValue = currentInput;
+      console.log(currentInput);
+      input.value = currentValue;
+      optionalExtremums(currentValue);
+    }
+
+    minus.addEventListener("click", makeDecrement);
+    input.addEventListener("input", inputHandler);
+    plus.addEventListener("click", makeIncrement);
+  });
+}

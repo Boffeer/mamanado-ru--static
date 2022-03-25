@@ -1,6 +1,8 @@
 .cart__page {
 	padding-top: 80px;
 	padding-bottom: 80px;
+	overflow: hidden;
+	position: relative;
 }
 .cart-table {
 	background: #ffffff;
@@ -89,11 +91,16 @@
 		width: 12px;
 		height: 2px;
 	}
+}
+.cart-table__remove {
+	&:focus,
 	&:hover {
-		background-color: var(--c-danger);
-		&::before,
-		&::after {
-			background-color: #fff;
+		.cart-table__remve-cross {
+			background-color: var(--c-danger);
+			&::before,
+			&::after {
+				background-color: #fff;
+			}
 		}
 	}
 }
@@ -131,4 +138,48 @@
 
 .button__cart-checkout {
 	max-width: 350px;
+}
+
+.cart-table__size-picker {
+	width: 60px;
+}
+
+.cart-table__size-current {
+	padding-left: 10px;
+	display: flex;
+	&::after {
+		content: "";
+		margin-left: 3px;
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		background-color: var(--c-text-second);
+		@include getmask(url("../img/common/angle-right.svg"));
+		transform: rotate(90deg);
+	}
+	&:focus,
+	&:hover {
+		color: var(--c-primary);
+		&::after {
+			background-color: var(--c-primary);
+		}
+	}
+}
+.cart-table__size-list {
+	width: 60px;
+	background-color: #fdfdfd;
+	// box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.2);
+	border-radius: 5px;
+}
+
+.cart-table__size-list-variation {
+	width: 60px;
+	button {
+		display: block;
+		width: 100%;
+		&:focus,
+		&:hover {
+			color: var(--c-primary);
+		}
+	}
 }

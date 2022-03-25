@@ -226,3 +226,15 @@
 	line-height: 17px;
 	color: #adadad;
 }
+
+.product-cell {
+	&:focus,
+	&:hover {
+		.product-cell__pic {
+			border-color: var(--c-primary-inactive);
+		}
+		.product-cell__name {
+			color: var(--c-primary);
+		}
+	}
+}

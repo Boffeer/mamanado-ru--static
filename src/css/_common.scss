@@ -193,6 +193,7 @@
 	--button-color: #a1a1a1;
 	color: var(--button-color);
 	border: 1px solid var(--button-color);
+	&:focus,
 	&:hover {
 		color: #fff;
 		background-color: var(--button-color);
@@ -224,6 +225,7 @@
 		position: absolute;
 		bottom: 15px;
 	}
+	&:focus,
 	&:hover {
 		--button-color: var(--c-primary);
 	}
@@ -271,6 +273,7 @@
 	display: flex;
 	justify-content: center;
 	padding-top: 20px;
+	min-width: 100px;
 
 	.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
 		opacity: 0.5;
@@ -312,6 +315,10 @@
 	box-shadow: inset -1.87227px -1.87227px 1.87227px rgba(255, 255, 255, 0.7),
 		inset 2.8084px 2.8084px 1.87227px rgba(174, 174, 192, 0.2);
 	border-radius: 7.48907px;
+
+	&:focus {
+		outline: 1px solid var(--c-primary);
+	}
 }
 .input__placeholder {
 	position: absolute;
@@ -391,6 +398,9 @@
 }
 .radio__checkbox-hidden {
 	appearance: none;
+	&:focus + .radio__checkbox {
+		outline: 2px solid var(--c-primary);
+	}
 }
 .radio__checkbox-hidden:checked + .radio__checkbox:after {
 	background-color: var(--c-primary);
@@ -418,6 +428,9 @@
 	line-height: 120%;
 	align-items: center;
 	color: #444444;
+	&:disabled {
+		opacity: 0.5;
+	}
 }
 .control-stepper__input {
 	width: 100%;
@@ -429,6 +442,20 @@
 	line-height: 120%;
 	text-align: center;
 	color: #444444;
+}
+.control-stepper__minus {
+	&:focus,
+	&:hover {
+		background-color: var(--c-invalid);
+		color: #fff;
+	}
+}
+.control-stepper__plus {
+	&:focus,
+	&:hover {
+		background-color: var(--c-valid);
+		color: #fff;
+	}
 }
 
 .textarea {

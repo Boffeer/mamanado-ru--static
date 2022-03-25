@@ -4,7 +4,6 @@
 }
 
 .account__title {
-	margin-top: 50px;
 	margin-bottom: 50px;
 }
 .account__content {
@@ -35,6 +34,10 @@
 	font-size: inherit;
 	display: block;
 	padding: 22px;
+	&:focus,
+	&:hover {
+		color: var(--c-primary);
+	}
 }
 .account__nav-item--active {
 	background: rgba(116, 134, 199, 0.05);
