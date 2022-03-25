@@ -286,3 +286,41 @@ if (steppers) {
     plus.addEventListener("click", makeIncrement);
   });
 }
+
+const inputFields = document.querySelectorAll(".input");
+if (inputFields) {
+  function checkInputContent(input, placeholder) {
+    if (input.value !== "") {
+      if (!placeholder.classList.contains("active")) {
+        placeholder.classList.add("active");
+      }
+      return;
+    }
+    placeholder.classList.remove("active");
+  }
+  inputFields.forEach((input) => {
+    const placeholder = input.parentElement.querySelector(
+      ".input__placeholder"
+    );
+    input.addEventListener("focus", () => {
+      if (!placeholder) return;
+
+      placeholder.classList.add("active");
+    });
+
+    if (placeholder) {
+      input.addEventListener("blur", () =>
+        checkInputContent(input, placeholder)
+      );
+      input.addEventListener("change", () =>
+        checkInputContent(input, placeholder)
+      );
+      input.addEventListener("input", () => {
+        console.log("input", input.value.length);
+        checkInputContent(input, placeholder);
+      });
+    }
+    input.focus();
+    input.blur();
+  });
+}

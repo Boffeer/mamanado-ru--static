@@ -328,7 +328,6 @@
 }
 .input__placeholder {
 	position: absolute;
-	// opacity: 0;
 	left: 20px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -336,6 +335,11 @@
 	line-height: 19px;
 	color: #a7a7a7;
 	transition: 0.25s all;
+}
+.input__placeholder.active {
+	opacity: 1;
+	top: 14px;
+	font-size: 12px;
 }
 
 // .input[value=""] ~ .input__placeholder {
@@ -345,11 +349,6 @@
 // .input:not([value=""]) ~ .input__placeholder,
 // .input:not(:empty) ~ .input__placeholder,
 // .input:focus ~ .input__placeholder {
-.input__placeholder--active {
-	opacity: 1;
-	top: 14px;
-	font-size: 12px;
-}
 .input__fieldset {
 	border: none;
 	padding: 0;
@@ -357,7 +356,7 @@
 	flex-wrap: wrap;
 	align-items: flex-start;
 
-	.input {
+	.input__wrap {
 		margin-right: 20px;
 		margin-bottom: 20px;
 		&:nth-of-type(3n) {
