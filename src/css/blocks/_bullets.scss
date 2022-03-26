@@ -51,3 +51,15 @@
 	text-align: center;
 	color: #444444;
 }
+
+@media (max-width: 991px) {
+	.bullets__container {
+		flex-wrap: wrap;
+	}
+	.bullets-card {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		max-width: 48%;
+	}
+}

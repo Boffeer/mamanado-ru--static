@@ -58,7 +58,7 @@ let offersSlider = new Swiper(".offers-slider", {
   a11y: {
     enabled: false,
   },
-  grabCursor: true,
+  // grabCursor: true,
   effect: "creative",
   creativeEffect: {
     prev: {
@@ -347,4 +347,16 @@ if (anchors) {
       });
     });
   }
+}
+
+const filterVisibilityTogglers = document.querySelectorAll(
+  ".filter__button-toggle"
+);
+const filterBlock = document.querySelector(".filter");
+if (filterVisibilityTogglers) {
+  filterVisibilityTogglers.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterBlock.classList.toggle("filter--visible");
+    });
+  });
 }
