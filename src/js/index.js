@@ -1,3 +1,4 @@
+const htmlTag = document.querySelector("html");
 const header = document.querySelector(".header");
 const searchButton = document.querySelector(".header-userbar__item--search");
 const searchActiveClass = "header--search-active";
@@ -16,8 +17,16 @@ searchButton.addEventListener("click", () => {
   toggleSearchBar();
 });
 header.addEventListener("mouseleave", () => {
+  if (window.innerWidth < 1199) return;
   header.classList.remove(searchActiveClass);
   searchInput.blur();
+});
+
+const burger = document.querySelector(".burger");
+burger.addEventListener("click", () => {
+  header.classList.toggle("header--burger-opened");
+  htmlTag.classList.toggle("poppa-block-scrolling");
+  burger.classList.toggle("burger--active");
 });
 
 import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
@@ -70,6 +79,7 @@ let offersSlider = new Swiper(".offers-slider", {
 });
 
 let featuresSlider = new Swiper(".featured-slider", {
+  spaceBetween: 20,
   grabCursor: true,
   effect: "creative",
   slidesPerView: 4,

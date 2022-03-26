@@ -23,7 +23,8 @@
 	padding-top: 50px;
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 370px);
+	// grid-template-columns: repeat(auto-fill, 370px);
+	grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
 	gap: 25px 30px;
 }
 
@@ -117,5 +118,12 @@
 		&::after {
 			transform: translateX(10px);
 		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.blog__gallery {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 15px;
 	}
 }

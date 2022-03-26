@@ -95,7 +95,7 @@ if (bayans.length > 0) {
       if (bayanObject.bayan.classList.value.includes("bayan--desktop-hover")) {
         let hoverTimer;
         let hoverTimerDelay = 100;
-        if (window.innerWidth > 1100) {
+        if (window.innerWidth > 1199) {
           bayanObject.top.bayan.addEventListener("mouseover", (event) => {
             function isBayanOpened() {
               return bayanObject.bayan.classList.value.includes(
@@ -122,7 +122,7 @@ if (bayans.length > 0) {
       );
 
       if (bayanObject.bayan.getAttribute("data-bayan")?.includes("absolute")) {
-        bayanObject.bottom.bayan.style.position = "absolute";
+        bayanObject.bottom.bayan.classList.add("bayan__bottom--absolute");
 
         const hoverBayanWrapper = bayanObject.bayan.parentElement;
         // hoverBayanWrappers.forEach((hoverBayanWrapper) => {
@@ -130,6 +130,11 @@ if (bayans.length > 0) {
           closeBayan(bayanObject);
         });
         // });
+      }
+      if (
+        bayanObject.bayan.getAttribute("data-bayan-mobile")?.includes("static")
+      ) {
+        bayanObject.bottom.bayan.classList.add("bayan__bottom--mobile-static");
       }
     }
 

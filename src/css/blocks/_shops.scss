@@ -19,6 +19,10 @@
 	color: #444444;
 }
 
+.shops__info {
+	margin-right: 30px;
+}
+
 .shops-addresses {
 	max-width: 370px;
 	padding: 25px;
@@ -74,6 +78,7 @@
 .shops__map-placeholder {
 	max-width: 100%;
 	width: 100%;
+	height: 100%;
 }
 .shops__map-placeholder--hidden {
 	display: none;
@@ -86,4 +91,10 @@
 }
 .shops__map-iframe--active {
 	display: block;
+}
+
+@media (max-width: 1199px) {
+	.shops__map {
+		max-width: 540px;
+	}
 }

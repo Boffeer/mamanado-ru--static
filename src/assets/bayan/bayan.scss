@@ -22,7 +22,17 @@
 	max-height: 0;
 }
 
+.bayan__bottom--absolute {
+	position: absolute;
+}
+
 .bayan--opened .bayan__bottom {
 	margin-top: 0;
 	opacity: 1;
+}
+
+@media (max-width: 1199px) {
+	.bayan__bottom--mobile-static {
+		position: static;
+	}
 }
