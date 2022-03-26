@@ -45,6 +45,10 @@
 	&::after {
 		height: 70px;
 	}
+	&.swiper-button-disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
 }
 .featured__button-prev {
 	margin-right: 35px;
@@ -172,5 +176,8 @@
 @media (max-width: 991px) {
 	.category__catalog {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.featured-slider-slide {
+		max-width: 270px;
 	}
 }

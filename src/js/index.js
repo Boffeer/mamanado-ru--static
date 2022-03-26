@@ -54,11 +54,9 @@ let headerStocks = new Swiper(".header-stocks", {
 });
 
 let offersSlider = new Swiper(".offers-slider", {
-  // loop: true,
   a11y: {
     enabled: false,
   },
-  // grabCursor: true,
   effect: "creative",
   creativeEffect: {
     prev: {
@@ -81,25 +79,21 @@ let offersSlider = new Swiper(".offers-slider", {
 let featuresSlider = new Swiper(".featured-slider", {
   spaceBetween: 20,
   grabCursor: true,
-  effect: "creative",
-  slidesPerView: 4,
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      translate: [0, 0, -400],
-    },
-    next: {
-      translate: ["100%", 0, 0],
-    },
-  },
+  slidesPerView: "auto",
   navigation: {
     nextEl: ".featured__button-next",
     prevEl: ".featured__button-prev",
   },
+  breakpoints: {
+    // when window width is >= 320px
+    992: {
+      slidesPerView: 4,
+    },
+  },
 });
 
 let partnersSlider = new Swiper(".partners-slider", {
-  slidesPerView: 5,
+  slidesPerView: 2,
   slidesPerGroup: 2,
   spaceBetween: 25,
   grabCursor: true,
@@ -121,6 +115,15 @@ let partnersSlider = new Swiper(".partners-slider", {
     el: ".partners-slider__pagination",
     clickable: true,
     dynamicBullets: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    992: {
+      slidesPerView: 5,
+    },
+    768: {
+      slidesPerView: 3,
+    },
   },
 });
 

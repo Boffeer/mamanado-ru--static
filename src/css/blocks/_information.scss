@@ -130,6 +130,7 @@
 .refund__container {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
 	padding-bottom: 80px;
 }
 
@@ -183,5 +184,86 @@
 	}
 	.socials__link:first-child {
 		margin-left: 0;
+	}
+}
+
+@media (max-width: 1199px) {
+	.about-page__pic {
+		margin-left: -50px;
+	}
+	.refund__inner {
+		max-width: 440px;
+		margin-right: 50px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.payment-page__accordion {
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		margin-bottom: 0;
+		&:last-child {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		}
+		.bayan--opened {
+			.payment-page__accordion-title::after {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	.payment-page__accordion-title {
+		padding-top: 12px;
+		padding-bottom: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&::after {
+			content: "";
+			display: block;
+			width: 16px;
+			height: 16px;
+			background-color: #000;
+			@include getmask(url("../img/common/angle-right.svg"));
+			transform: rotate(90deg);
+			transition: 0.25s all;
+		}
+	}
+	.payment-page__accordion-desc {
+		padding-bottom: 21px;
+	}
+	.section__columns-2 {
+		columns: initial;
+	}
+	.section__column {
+		margin-bottom: 25px;
+	}
+
+	.refund__inner {
+		margin-right: 0;
+		max-width: 100%;
+	}
+	.refund__container {
+		display: block;
+	}
+	.refund-form {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.about-page__container {
+		align-items: flex-end;
+	}
+	.about-page__pic {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 300px;
+	}
+	.about-page__socials {
+		display: none;
+	}
+}
+
+@media (max-width: 991px) {
+	.about-page__container {
+		display: block;
 	}
 }

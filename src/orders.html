@@ -16,22 +16,48 @@
 					</div>
 					<div class="account-orders__body">
 						<div class="account-orders__row account-orders__columns">
-							<div class="account-orders__cell">
+							<div class="account-orders__cell account-orders__cell--product">
 								<include src="src/blocks/product-cell.html"></include>
 							</div>
-							<div class="account-orders__cell">3</div>
-							<div class="account-orders__cell">3500₽</div>
-							<div class="account-orders__cell">7500₽</div>
-							<div class="account-orders__cell complete">Доставлено</div>
+							<div class="account-orders__cell account-orders__cell--quantity">
+								<span class="account-orders__cell-title">Количество</span>
+								3
+							</div>
+							<div class="account-orders__cell account-orders__cell--price">
+								<span class="account-orders__cell-title">За шт</span>
+								3500₽
+							</div>
+							<div class="account-orders__cell account-orders__cell--total">
+								<span class="account-orders__cell-title">Итого</span>
+								7500₽
+							</div>
+							<div
+								class="account-orders__cell account-orders__cell--status complete"
+							>
+								Доставлено
+							</div>
 						</div>
 						<div class="account-orders__row account-orders__columns">
-							<div class="account-orders__cell">
+							<div class="account-orders__cell account-orders__cell--product">
 								<include src="src/blocks/product-cell.html"></include>
 							</div>
-							<div class="account-orders__cell">3</div>
-							<div class="account-orders__cell">3500₽</div>
-							<div class="account-orders__cell">7500₽</div>
-							<div class="account-orders__cell">В пути</div>
+							<div class="account-orders__cell account-orders__cell--quantity">
+								<span class="account-orders__cell-title">Количество</span>
+								3
+							</div>
+							<div class="account-orders__cell account-orders__cell--price">
+								<span class="account-orders__cell-title">За шт</span>
+								3500₽
+							</div>
+							<div class="account-orders__cell account-orders__cell--total">
+								<span class="account-orders__cell-title">Итого</span>
+								7500₽
+							</div>
+							<div
+								class="account-orders__cell account-orders__cell--status complete"
+							>
+								Доставлено
+							</div>
 						</div>
 					</div>
 

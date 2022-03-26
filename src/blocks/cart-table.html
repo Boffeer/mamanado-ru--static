@@ -4,14 +4,14 @@
 	<h3 class="cart-table__header">За шт</h3>
 	<h3 class="cart-table__header">Итого</h3>
 	<h3 class="cart-table__header">Размер</h3>
-	<h3 class="cart-table__header"></h3>
+	<!-- <h3 class="cart-table__header"></h3> -->
 </div>
 <div class="cart-table__body cart-table__columns">
 	<article class="cart-table__row">
-		<div class="cart-table__cell">
+		<div class="cart-table__cell cart-table__cell--product">
 			<include src="src/blocks/product-cell.html"></include>
 		</div>
-		<div class="cart-table__cell">
+		<div class="cart-table__cell cart-table__cell--quantity">
 			<div class="cart-table__quantity-stepper control-stepper">
 				<button class="control-stepper__minus control-stepper__button">
 					−
@@ -24,9 +24,16 @@
 				<button class="control-stepper__plus control-stepper__button">+</button>
 			</div>
 		</div>
-		<div class="cart-table__cell">3500₽</div>
-		<div class="cart-table__cell">7500₽</div>
-		<div class="cart-table__cell">
+		<div class="cart-table__cell cart-table__cell--product-price">
+			<span class="cart-table__cell-title">За шт</span>
+			<span>3500₽</span>
+		</div>
+		<div class="cart-table__cell cart-table__cell--product-total">
+			<span class="cart-table__cell-title">Всего</span>
+			<span>7500₽</span>
+		</div>
+		<div class="cart-table__cell cart-table__cell--size">
+			<span class="cart-table__cell-title">Размер</span>
 			<div class="bayan cart-table__size-picker" data-bayan="absolute">
 				<button class="cart-table__size-current">34</button>
 				<ul class="cart-table__size-list">
@@ -51,10 +58,10 @@
 		</div>
 	</article>
 	<article class="cart-table__row">
-		<div class="cart-table__cell">
+		<div class="cart-table__cell cart-table__cell--product">
 			<include src="src/blocks/product-cell.html"></include>
 		</div>
-		<div class="cart-table__cell">
+		<div class="cart-table__cell cart-table__cell--quantity">
 			<div class="cart-table__quantity-stepper control-stepper">
 				<button class="control-stepper__minus control-stepper__button">
 					−
@@ -67,9 +74,66 @@
 				<button class="control-stepper__plus control-stepper__button">+</button>
 			</div>
 		</div>
-		<div class="cart-table__cell">3500₽</div>
-		<div class="cart-table__cell">7500₽</div>
-		<div class="cart-table__cell">
+		<div class="cart-table__cell cart-table__cell--product-price">
+			<span class="cart-table__cell-title">За шт</span>
+			<span>3500₽</span>
+		</div>
+		<div class="cart-table__cell cart-table__cell--product-total">
+			<span class="cart-table__cell-title">Всего</span>
+			<span>7500₽</span>
+		</div>
+		<div class="cart-table__cell cart-table__cell--size">
+			<span class="cart-table__cell-title">Размер</span>
+			<div class="bayan cart-table__size-picker" data-bayan="absolute">
+				<button class="cart-table__size-current">34</button>
+				<ul class="cart-table__size-list">
+					<li class="cart-table__size-list-variation">
+						<button type="button" href="#a">30</button>
+					</li>
+					<li class="cart-table__size-list-variation">
+						<button type="button" href="#a">30</button>
+					</li>
+					<li class="cart-table__size-list-variation">
+						<button type="button" href="#a">30</button>
+					</li>
+					<li class="cart-table__size-list-variation">
+						<button type="button" href="#a">30</button>
+					</li>
+				</ul>
+			</div>
+			<button class="button button button--thirdly cart-table__remove">
+				Удалить из корзины
+				<span class="cart-table__remve-cross"></span>
+			</button>
+		</div>
+	</article>
+	<article class="cart-table__row">
+		<div class="cart-table__cell cart-table__cell--product">
+			<include src="src/blocks/product-cell.html"></include>
+		</div>
+		<div class="cart-table__cell cart-table__cell--quantity">
+			<div class="cart-table__quantity-stepper control-stepper">
+				<button class="control-stepper__minus control-stepper__button">
+					−
+				</button>
+				<input
+					type="text"
+					class="control-stepper__input cart-table__quantity"
+					value="3"
+				/>
+				<button class="control-stepper__plus control-stepper__button">+</button>
+			</div>
+		</div>
+		<div class="cart-table__cell cart-table__cell--product-price">
+			<span class="cart-table__cell-title">За шт</span>
+			<span>3500₽</span>
+		</div>
+		<div class="cart-table__cell cart-table__cell--product-total">
+			<span class="cart-table__cell-title">Всего</span>
+			<span>7500₽</span>
+		</div>
+		<div class="cart-table__cell cart-table__cell--size">
+			<span class="cart-table__cell-title">Размер</span>
 			<div class="bayan cart-table__size-picker" data-bayan="absolute">
 				<button class="cart-table__size-current">34</button>
 				<ul class="cart-table__size-list">

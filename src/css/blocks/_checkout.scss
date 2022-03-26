@@ -1,6 +1,4 @@
 .checkout-order {
-	// display: grid;
-	// grid-template-columns: repeat(2, 1fr);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -150,13 +148,26 @@
 	.checkout-shipping__caption {
 		text-align: center;
 	}
-	.account-addresses__create {
-		max-width: 100%;
+	.checkcout-shipping__form {
+		.account-addresses__create {
+			max-width: 100%;
+		}
 	}
 	.checkout-order__column .input__wrap {
 		margin-right: 0;
 	}
 	.checkout-total__title {
 		max-width: 160px;
+	}
+}
+
+@media (max-width: 921px) {
+	.checkout-order {
+		display: block;
+		background: #fbfbfb;
+		border-radius: 0;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-sizing: border-box;
+		box-shadow: 0px 14px 44px rgba(197, 197, 197, 0.25);
 	}
 }

@@ -3,9 +3,8 @@ Swiper.use([Navigation, Autoplay, Pagination, Thumbs]);
 
 let productThumbnails = new Swiper(".proudct-details-thumbnails", {
   // slidesPerView: "auto",
-  slidesPerView: 3,
+  slidesPerView: 4,
   spaceBetween: 15,
-  direction: "vertical",
   grabCursor: true,
   effect: "creative",
   creativeEffect: {
@@ -25,6 +24,15 @@ let productThumbnails = new Swiper(".proudct-details-thumbnails", {
     el: ".proudct-details-thumbnails__pagination",
   },
   watchSlidesProgress: true,
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+      direction: "vertical",
+    },
+    768: {
+      slidesPerView: 5,
+    },
+  },
 });
 let productGallery = new Swiper(".product-detail-gallery", {
   grabCursor: true,

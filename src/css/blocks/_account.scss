@@ -369,6 +369,13 @@
 .account__nav-current {
 	display: none;
 }
+.account-adresses {
+	margin-bottom: 25px;
+}
+
+.account-orders__cell-title {
+	display: none;
+}
 
 @media (max-width: 1199px) {
 	.account__page {
@@ -435,6 +442,108 @@
 		margin-bottom: 15px;
 	}
 	.input__fieldset .form-account-input__wrap {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 991px) {
+	.wishlist__buttons {
+		max-width: 160px;
+	}
+	.wishlist__buy {
+		padding: 0;
+		font-size: 0;
+		max-width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		position: relative;
+		border: 1px solid #e0e0e0;
+		background-color: #fff;
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			background: #e0e0e0;
+			pointer-events: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include getmask(url("../img/product/cart.svg"));
+			mask-size: 50%;
+		}
+		&:hover {
+			background-color: var(--c-primary);
+			&::after {
+				background-color: #fff;
+			}
+		}
+	}
+	.wishlist__remove {
+		padding: 0;
+		font-size: 0;
+		max-width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		position: relative;
+		border: 1px solid #e0e0e0;
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			background: var(--c-danger);
+			pointer-events: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include getmask(url("../img/common/remove.svg"));
+			mask-size: 50%;
+		}
+		&:hover::after {
+			background-color: #fff;
+		}
+	}
+	.account-addresses__create {
+		max-width: 270px;
+	}
+	.input__fieldset .input__wrap:nth-of-type(3) {
+		margin-right: 20px;
+	}
+
+	.account-orders__heading {
+		display: none;
+	}
+	.account-orders__row {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #e0e0e0;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	.account-orders__cell--product {
+		max-width: 100%;
+		width: 100%;
+		padding-right: 125px;
+	}
+	.account-orders__cell-title {
+		display: block;
+		font-size: 14px;
+		color: #444444;
+	}
+	.account-orders__cell--status {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.account-orders__cell:first-child {
 		margin-right: 0;
 	}
 }
