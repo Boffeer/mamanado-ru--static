@@ -181,3 +181,20 @@
 		max-width: 270px;
 	}
 }
+
+@media (max-width: 767px) {
+	.featured-slider-slide {
+		max-width: 250px;
+	}
+	.category__subcategories {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.category-subcategories__button-prev,
+	.category-subcategories__button-next {
+		display: none;
+	}
+	.category__heading {
+		margin-bottom: 15px;
+	}
+}

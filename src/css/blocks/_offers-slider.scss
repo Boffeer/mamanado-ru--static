@@ -115,3 +115,30 @@
 		height: 100%;
 	}
 }
+
+@media (max-width: 767px) {
+	.offers-slider__slide {
+		padding-top: 28px;
+		padding-bottom: 20px;
+	}
+	.offers-slider__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.offers-slider__title {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 120%;
+	}
+	.offers-slider__desc {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 130%;
+	}
+	.offers-slider__button {
+		max-width: initial;
+		display: inline-block;
+		width: auto;
+	}
+}

@@ -63,6 +63,7 @@
 
 .article-card__img {
 	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	transition: 0.25s all;
 }
@@ -132,5 +133,36 @@
 		ul {
 			padding-left: 30px;
 		}
+	}
+}
+
+@media (max-width: 767px) {
+	.blog__gallery {
+		grid-template-columns: 1fr 1fr;
+	}
+	.article-card {
+		padding-bottom: 20px;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+	.article-card__title {
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 120%;
+		color: #36383a;
+	}
+	.article-card__desc {
+		font-weight: 350;
+		font-size: 14px;
+		line-height: 125%;
+		color: #36383a;
+	}
+	.article-card__link {
+		font-size: 15px;
+		line-height: 125%;
+	}
+	.article-card__img-link {
+		width: calc(100% + 32px);
+		margin-left: -16px;
 	}
 }

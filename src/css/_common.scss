@@ -984,9 +984,12 @@
 	.filter--visible {
 		transform: translateX(0);
 	}
+	.category__subcategories {
+		width: calc(100% + 15px);
+	}
 	.filter__list {
 		padding-top: 10px;
-		max-height: 60%;
+		max-height: 40vh;
 		margin-bottom: 15px;
 		overflow: auto;
 		mask-image: var(--vertical-scroll-mask-limiter);

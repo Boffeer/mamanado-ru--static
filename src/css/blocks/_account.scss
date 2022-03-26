@@ -547,3 +547,9 @@
 		margin-right: 0;
 	}
 }
+
+@media (max-width: 767px) {
+	.register-form__left .input__fieldset .input__wrap:nth-of-type(3) {
+		margin-right: 0;
+	}
+}
