@@ -361,3 +361,80 @@
 	padding-top: 14px;
 	padding-bottom: 14px;
 }
+.account__nav-accordion {
+	.bayan--dynamic {
+		display: none;
+	}
+}
+.account__nav-current {
+	display: none;
+}
+
+@media (max-width: 1199px) {
+	.account__page {
+		display: block;
+	}
+	.account__nav-accordion {
+		.bayan--static {
+			display: none;
+		}
+		.bayan--dynamic {
+			display: block;
+		}
+	}
+
+	.account__nav {
+		margin-right: 0;
+		background: rgba(116, 134, 199, 0.05);
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-sizing: border-box;
+		margin-bottom: 25px;
+		max-width: 100%;
+		--brad: 10px;
+		border-radius: var(--brad);
+	}
+	.account__nav-current {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 13px 14px;
+		font-size: 18px;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 14px;
+			height: 14px;
+			background-color: #bdbdbd;
+			transform: rotate(90deg);
+			@include getmask(url("../img/common/angle-right.svg"));
+		}
+	}
+	.account__nav-list {
+		border-top: 1px solid #eaeaea;
+		border-radius: 0px;
+		border-radius: inherit;
+		border-radius: 0 0 var(--brad) var(--brad);
+	}
+	.account__nav-item--active {
+		display: none;
+	}
+	.account__title {
+		margin-bottom: 30px;
+	}
+
+	.account-addresses__form {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.account-addresses__new {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.empty__desc {
+		margin-bottom: 15px;
+	}
+	.input__fieldset .form-account-input__wrap {
+		margin-right: 0;
+	}
+}

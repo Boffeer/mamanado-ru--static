@@ -345,31 +345,41 @@
 				</div>
 			</div>
 		</section>
-		<section class="product-details">
+		<section class="product-details" id="product-details">
 			<div class="container product-details__container">
 				<div class="product-details__tabers">
-					<button
-						data-tab="Характеристики"
+					<a
+						href="#product-details"
+						data-tab="Общая информация"
 						class="product-details__taber product-details__taber--active"
 					>
 						Общая информация
-					</button>
-					<button data-tab="Отзывы" class="product-details__taber">
+					</a>
+					<a
+						href="#product-details"
+						data-tab="Отзывы"
+						class="product-details__taber"
+					>
 						Отзывы
-					</button>
-					<button data-tab="Характеристики" class="product-details__taber">
+					</a>
+					<a
+						href="#product-details"
+						data-tab="Характеристики"
+						class="product-details__taber"
+					>
 						Характеристики
-					</button>
-					<button data-tab="Похожие товары" class="product-details__taber">
+					</a>
+					<a
+						href="#product-details"
+						data-tab="Похожие товары"
+						class="product-details__taber"
+					>
 						Похожие товары
-					</button>
+					</a>
 				</div>
 				<div class="product-details__tabs">
 					<!-- stats -->
-					<div
-						data-tab="Характеристики"
-						class="product-details__tab product-details__tab--active"
-					>
+					<div data-tab="Характеристики" class="product-details__tab">
 						<h2 class="product-details__title">Характеристики</h2>
 						<div class="product-details__stats">
 							<div class="product-details__stat">
@@ -442,7 +452,10 @@
 					</div>
 					<!-- /stats -->
 					<!-- reviews -->
-					<div data-tab="Отзывы" class="product-details__tab">
+					<div
+						data-tab="Отзывы"
+						class="product-details__tab product-details__tab--reviews"
+					>
 						<div class="product-details__tab-top">
 							<h2
 								class="product-details__title product-details__tab-reviews-title"
@@ -599,7 +612,10 @@
 					</div>
 					<!-- /reviews -->
 					<!-- description -->
-					<div data-tab="Описание" class="product-details__tab">
+					<div
+						data-tab="Общая информация"
+						class="product-details__tab product-details__tab--active"
+					>
 						<h2 class="product-details__title">Описание</h2>
 						<div class="product-details__description">
 							<p>

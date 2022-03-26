@@ -330,6 +330,7 @@
 	line-height: 19px;
 	color: #a7a7a7;
 	transition: 0.25s all;
+	pointer-events: none;
 }
 .input__placeholder.active {
 	opacity: 1;

@@ -229,7 +229,7 @@ if (steppers) {
     optionalExtremums(currentValue);
 
     function checkExtremums(currentValue) {
-      if (+currentValue <= inputMinExtremum + 1) {
+      if (+currentValue <= inputMinExtremum) {
         minus.setAttribute("disabled", "disabled");
         isMinusDisabled = true;
       } else {
@@ -247,7 +247,7 @@ if (steppers) {
     function optionalExtremums(currentValue) {
       if (!(inputMinExtremum && inputMaxExtremum)) {
         inputMaxExtremum = 999;
-        inputMinExtremum = 0;
+        inputMinExtremum = 1;
       }
 
       checkExtremums(currentValue);
@@ -333,4 +333,18 @@ if (inputFields) {
     input.focus();
     input.blur();
   });
+}
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+if (anchors) {
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const blockID = anchor.getAttribute("href").substr(1);
+      document.getElementById(blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
 }

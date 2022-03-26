@@ -1,8 +1,10 @@
+.product-detail {
+	margin-bottom: 80px;
+}
 .product-detail__container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 100px;
-	margin-bottom: 160px;
 }
 .product-detail__photos {
 	max-width: 600px;
@@ -39,10 +41,8 @@
 	box-sizing: border-box;
 	border-radius: 10px;
 	overflow: hidden;
-	// max-width: 100px;
-	// height: 100px;
-	// max-height: 100px;
-	&.swiper-slide-active {
+	// &.swiper-slide-active {
+	&--active {
 		border-color: var(--c-primary);
 	}
 }
@@ -272,6 +272,8 @@
 
 .product-details__container {
 	background-color: #fff;
+	position: relative;
+	overflow: visible;
 }
 .product-details__tab {
 	display: none;
@@ -280,11 +282,14 @@
 	display: block;
 }
 .product-details__tabers {
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	border-bottom: 1px solid #eaeaea;
+	background-color: #fff;
 }
 .product-details__taber {
 	position: relative;
@@ -407,20 +412,18 @@
 	top: 10px;
 }
 
-.product-details-reviews {
-	display: inline-block;
-	max-width: 650px;
-	width: 100%;
-	margin-right: 60px;
-	overflow: visible;
+.product-details__tab-bottom {
+	display: grid;
+	grid-template-columns: 2fr 0.8fr;
+	align-items: start;
+	column-gap: 60px;
 }
 .product-details-reviews-dash {
-	display: inline-block;
 	max-width: 353px;
 	width: 100%;
 	vertical-align: top;
 	position: sticky;
-	top: 15px;
+	top: 90px;
 	bottom: 50px;
 }
 
@@ -549,4 +552,33 @@
 }
 .product-details__similar-more {
 	max-width: 370px;
+}
+
+@media (max-width: 1199px) {
+	.proudct-details-thumbnails__wrap {
+		margin-right: 20px;
+	}
+	.product-detail__container {
+		column-gap: 20px;
+	}
+	.product-detail__title {
+		font-size: 30px;
+	}
+	.product-detail__price--new {
+		font-weight: 600;
+	}
+	.product-details__gallery {
+		grid-template-columns: repeat(3, minmax(170px, 1fr));
+	}
+
+	.product-details__tabers {
+		top: 55px;
+	}
+
+	.product-details-reviews-dash {
+		top: 140px;
+	}
+	.reviews-dash__chart[value] {
+		max-width: 180px;
+	}
 }

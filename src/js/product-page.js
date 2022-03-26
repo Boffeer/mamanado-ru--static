@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
-Swiper.use([Navigation, Autoplay, Pagination]);
+import Swiper, { Navigation, Autoplay, Pagination, Thumbs } from "swiper";
+Swiper.use([Navigation, Autoplay, Pagination, Thumbs]);
 
 let productThumbnails = new Swiper(".proudct-details-thumbnails", {
   // slidesPerView: "auto",
@@ -50,6 +50,38 @@ let productGallery = new Swiper(".product-detail-gallery", {
   thumbs: {
     swiper: productThumbnails,
   },
+});
+
+const thumbsSlides = [
+  ...document.querySelectorAll(".proudct-details-thumbnails__slide"),
+];
+const thumbsSlideActiveClass = "proudct-details-thumbnails__slide--active";
+function handleGallerySlideChange() {
+  productThumbnails.slideTo(productGallery.activeIndex);
+}
+function handleThumbsSlideChange() {
+  thumbsSlides.forEach((slide) => {
+    slide.classList.remove(thumbsSlideActiveClass);
+  });
+  thumbsSlides[productThumbnails.activeIndex].classList.add(
+    thumbsSlideActiveClass
+  );
+}
+productGallery.on("slideNextTransitionEnd", handleGallerySlideChange);
+productGallery.on("slidePrevTransitionEnd", handleGallerySlideChange);
+productThumbnails.on("slideNextTransitionEnd", handleThumbsSlideChange);
+productThumbnails.on("slidePrevTransitionEnd", handleThumbsSlideChange);
+
+thumbsSlides.forEach((slide, index) => {
+  if (index == 0) {
+    slide.classList.add(thumbsSlideActiveClass);
+  }
+  slide.addEventListener("click", () => {
+    thumbsSlides.forEach((slide) => {
+      slide.classList.remove(thumbsSlideActiveClass);
+    });
+    slide.classList.add(thumbsSlideActiveClass);
+  });
 });
 
 const productTabButtons = document.querySelectorAll(".product-details__taber");

@@ -166,10 +166,12 @@
 	}
 }
 .cart-table__size-list {
+	padding-top: 8px;
 	width: 60px;
 	background-color: #fdfdfd;
 	// box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.2);
 	border-radius: 5px;
+	padding-bottom: 8px;
 }
 
 .cart-table__size-list-variation {
@@ -177,9 +179,16 @@
 	button {
 		display: block;
 		width: 100%;
+		margin-bottom: 10px;
 		&:focus,
 		&:hover {
 			color: var(--c-primary);
 		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.cart__page {
+		padding-top: 40px;
 	}
 }
