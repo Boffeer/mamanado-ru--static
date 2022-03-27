@@ -63,3 +63,21 @@
 		max-width: 48%;
 	}
 }
+
+@media (max-width: 767px) {
+	.bullets__container {
+		display: block;
+	}
+	.bullets-card {
+		max-width: 100%;
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.bullets-card__desc {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 130%;
+	}
+}

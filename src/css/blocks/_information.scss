@@ -219,6 +219,8 @@
 		&::after {
 			content: "";
 			display: block;
+			min-width: 16px;
+			margin-left: 5px;
 			width: 16px;
 			height: 16px;
 			background-color: #000;
@@ -265,5 +267,54 @@
 @media (max-width: 991px) {
 	.about-page__container {
 		display: block;
+	}
+}
+
+@media (max-width: 767px) {
+	.page__title {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 135%;
+		margin-bottom: 5px;
+	}
+
+	.payment-page {
+		padding-bottom: 35px;
+	}
+	.payment-page__subtitle {
+		margin-bottom: 15px;
+		font-weight: 600;
+		font-size: 15px;
+		line-height: 150%;
+	}
+	.payment-page__type {
+		margin-bottom: 25px;
+	}
+	.payment-page__accordion-title {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 125%;
+	}
+	.payment-page__accordion-desc {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 150%;
+	}
+
+	.shipping {
+		padding-bottom: 40px;
+	}
+	.shipping__lists {
+		padding-top: 20px;
+	}
+
+	.about-page__socials {
+		display: flex;
+	}
+	.socials__title {
+		font-size: 14px;
+	}
+	.refund__container {
+		padding-bottom: 40px;
 	}
 }

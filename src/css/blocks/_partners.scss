@@ -44,3 +44,18 @@
 	color: #36383a;
 	opacity: 0.5;
 }
+
+@media (max-width: 767px) {
+	.partners {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.partners-slider__slide {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.partners-slider__name {
+		font-size: 15px;
+		line-height: 120%;
+	}
+}

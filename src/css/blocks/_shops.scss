@@ -116,3 +116,31 @@
 		height: 250px;
 	}
 }
+
+@media (max-width: 767px) {
+	.shops {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.shop-addresses {
+		margin-bottom: 10px;
+	}
+	.shop-addresses__item {
+		padding: 15px 13px 15px 15px;
+	}
+	.shops-addresses__location {
+		align-items: flex-start;
+		margin-bottom: 10px;
+		.shops-addresses__icon {
+			margin-top: 5px;
+		}
+	}
+	.shops-addresses__icon {
+		min-width: 16px;
+		width: 16px;
+		height: 16px;
+	}
+	.shops__map {
+		height: 200px;
+	}
+}

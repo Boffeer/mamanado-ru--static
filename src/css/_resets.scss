@@ -46,3 +46,9 @@ body {
 	font-size: var(--fz-base);
 	color: var(--c-text-regular);
 }
+
+@media (max-width: 767px) {
+	html {
+		--fz-base: 15px;
+	}
+}

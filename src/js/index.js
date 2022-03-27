@@ -95,7 +95,7 @@ let featuresSlider = new Swiper(".featured-slider", {
 let partnersSlider = new Swiper(".partners-slider", {
   slidesPerView: 2,
   slidesPerGroup: 2,
-  spaceBetween: 25,
+  spaceBetween: 14,
   grabCursor: true,
   effect: "creative",
   creativeEffect: {
@@ -123,6 +123,7 @@ let partnersSlider = new Swiper(".partners-slider", {
     },
     768: {
       slidesPerView: 3,
+      spaceBetween: 25,
     },
   },
 });

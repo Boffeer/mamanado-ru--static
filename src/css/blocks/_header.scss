@@ -437,8 +437,8 @@
 		pointer-events: auto;
 	}
 	.header-userbar__item {
-		padding-top: 15px;
-		padding-bottom: 15px;
+		padding-top: 14px;
+		padding-bottom: 14px;
 		margin-left: 0;
 		position: relative;
 		&:hover .header-userbar__desc {
@@ -586,5 +586,39 @@
 	}
 	.header--search-active .search {
 		bottom: -160px;
+	}
+}
+
+@media (max-width: 767px) {
+	.header-userbar {
+		max-width: 100%;
+		box-shadow: none;
+		bottom: 0;
+		border-radius: 0;
+	}
+	.header__mobile {
+		padding-top: 9px;
+		padding-bottom: 9px;
+	}
+	.header-stocks__wrap {
+		max-width: 300px;
+	}
+	.header-stocks-slide {
+		text-align: left;
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
+	.header-nav {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.header-nav__tab {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.header__container {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

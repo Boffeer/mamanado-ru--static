@@ -459,6 +459,7 @@
 		position: relative;
 		border: 1px solid #e0e0e0;
 		background-color: #fff;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 		&::after {
 			content: "";
 			display: block;
@@ -488,6 +489,7 @@
 		border-radius: 100%;
 		position: relative;
 		border: 1px solid #e0e0e0;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 		&::after {
 			content: "";
 			display: block;
@@ -537,6 +539,7 @@
 		display: block;
 		font-size: 14px;
 		color: #444444;
+		opacity: 0.5;
 	}
 	.account-orders__cell--status {
 		position: absolute;
@@ -551,5 +554,179 @@
 @media (max-width: 767px) {
 	.register-form__left .input__fieldset .input__wrap:nth-of-type(3) {
 		margin-right: 0;
+	}
+	.account-orders__cell--status {
+		font-size: 12px;
+	}
+	.account-orders__cell--product {
+		padding-right: 0;
+		.product-cell__name {
+			padding-right: 85px;
+		}
+	}
+	.account-orders__cell {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 767px) {
+	.input__fieldset .input__wrap:nth-of-type(3) {
+		margin-right: 0;
+	}
+	.account__content-title,
+	.account-form__title {
+		font-size: 16px;
+		line-height: 19px;
+		margin-bottom: 10px;
+	}
+
+	.account__page {
+		padding-bottom: 40px;
+	}
+	.account-promo__item {
+		display: block;
+	}
+	.account-promo__name {
+		margin-right: 0;
+		margin-bottom: 8px;
+		font-size: 13px;
+	}
+	.account-promo__code {
+		text-align: center;
+		padding-top: 13px;
+		padding-bottom: 13px;
+	}
+
+	.account__personal-mailing {
+		display: block;
+		p {
+			text-align: center;
+			font-size: 13px;
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 8px;
+		}
+	}
+
+	.account__nav-current {
+		font-size: 16px;
+	}
+	.account__nav-list {
+		padding-top: 5px;
+	}
+	.account__nav-link {
+		padding: 10px;
+		font-size: 14px;
+	}
+
+	.wishlist__card {
+		position: relative;
+		align-items: flex-end;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #dfdfdf;
+		margin-bottom: 18px;
+
+		&:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		.product-cell__pic {
+			max-width: 77px;
+			height: 77px;
+			width: 77px;
+			margin-right: 8px;
+		}
+		.product-cell {
+			align-items: flex-start;
+		}
+		.product-cell__name {
+			padding-right: 25px;
+		}
+	}
+	.wishlist__buttons {
+		justify-content: flex-end;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: auto;
+	}
+	.wishlist__buy {
+		min-width: 30px;
+		width: 30px;
+		height: 30px;
+	}
+	.wishlist__remove {
+		min-width: 30px;
+		width: 30px;
+		height: 30px;
+		margin-left: 10px;
+	}
+	.wishlist__price {
+		display: flex;
+		flex-direction: column-reverse;
+		font-size: 16px;
+	}
+	.wishlist__price-caption {
+		margin-left: 0;
+	}
+
+	.account-adresses {
+		margin-bottom: 15px;
+	}
+	.account-addresses__item {
+		background: rgba(116, 134, 199, 0.05);
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-sizing: border-box;
+		border-radius: 10px;
+		padding: 12px;
+	}
+	.account-addresses__geo {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 130%;
+		margin-right: 10px;
+	}
+	.account-addresses__remove {
+		font-size: 0;
+		@include getmask(url("../img/common/remove.svg"));
+		background-color: #ee9797;
+		mask-size: 10px;
+		margin-left: 20px;
+	}
+	.account-addresses__change {
+		font-size: 0;
+		@include getmask(url("../img/common/edit.svg"));
+		background-color: #a5a5a5;
+	}
+	.account-addresses__form .input__wrap:not(.input__wrap-half) {
+		max-width: 100%;
+	}
+	.account-addresses__form .input__wrap-half {
+		max-width: calc(50% - 10px);
+	}
+	.account-addresses__discard {
+		margin-left: 34px;
+		position: relative;
+		font-size: 0;
+		border: 1px solid #e0e0e0;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+		min-width: 30px;
+		max-width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::after {
+			content: "";
+			display: block;
+			width: 55%;
+			height: 55%;
+			@include getmask(url("../img/common/remove.svg"));
+			background-color: #ee9797;
+		}
 	}
 }
