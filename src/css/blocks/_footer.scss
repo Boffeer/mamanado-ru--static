@@ -164,18 +164,21 @@
 
 	.footer__bottom {
 		border-top: none;
-		display: block;
+		display: flex;
+		flex-direction: column;
 		padding-top: 0;
 	}
 	.footer__address {
 		margin-bottom: 15px;
+		opacity: 0.5;
 	}
 	.footer__copyright {
 		margin-bottom: 15px;
-		opacity: 0.5;
+		opacity: 0.3;
+		width: 100%;
 	}
 	.footer__work-hours {
-		opacity: 0.3;
+		order: -2;
 	}
 	.footer__work-hours,
 	.footer__copyright,
@@ -198,5 +201,26 @@
 		font-size: 15px;
 		line-height: 125%;
 		padding-bottom: 5px;
+	}
+}
+
+@media (max-width: 575px) {
+	.footer {
+		padding-bottom: 40px;
+	}
+	.footer__work-hours {
+		font-size: 13px;
+		margin-bottom: 6px;
+	}
+	.footer__copyright {
+		font-size: 13px;
+		margin-bottom: 6px;
+	}
+	.footer__address {
+		font-size: 13px;
+		margin-bottom: 6px;
+	}
+	.footer__categories {
+		margin-bottom: 20px;
 	}
 }
