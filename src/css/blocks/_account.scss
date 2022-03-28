@@ -730,3 +730,10 @@
 		}
 	}
 }
+
+@media (max-width: 576px) {
+	.form__title {
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+}

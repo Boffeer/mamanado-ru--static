@@ -24,13 +24,15 @@
 	--z-burger: 110;
 
 	--card-shadow: 0px 14px 44px rgba(197, 197, 197, 0.25);
+
+	--mask-limiter-color: rgba(0, 0, 0, 0.25) 0;
 	--scroll-mask-limiter: linear-gradient(
 		90deg,
 		transparent 0,
-		rgba(0, 0, 0, 0.25) 0,
+		var(--mask-limiter-color) 0,
 		#000 18px,
 		#000 calc(100% - 18px),
-		rgba(0, 0, 0, 0.25) calc(100% - 9px),
+		var(--mask-limiter-color) calc(100% - 9px),
 		transparent
 	);
 	--vertical-scroll-mask-limiter: linear-gradient(

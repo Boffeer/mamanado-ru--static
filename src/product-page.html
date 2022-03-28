@@ -301,7 +301,10 @@
 						</svg>
 						<p>Есть в наличии</p>
 					</div>
-					<div class="product-detail__quantity-stepper control-stepper">
+					<div
+						class="product-detail__quantity-stepper control-stepper"
+						data-label="Количество"
+					>
 						<button class="control-stepper__minus control-stepper__button">
 							−
 						</button>
@@ -628,7 +631,7 @@
 					</div>
 					<!-- //description -->
 					<!-- similar -->
-					<div data-tab="Похожие товары" class="product-details__tab">
+					<div data-tab="Похожие товары" class="product-details__tab product-details__tab--similar">
 						<h2 class="product-details__title">Похожие товары</h2>
 						<div class="product-details__gallery">
 							<include src="src/blocks/product-card.html"></include>
