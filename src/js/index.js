@@ -377,6 +377,7 @@ if (inputFields) {
     }
     input.focus();
     input.blur();
+    checkInputContent(input, placeholder);
   });
 }
 
@@ -413,6 +414,16 @@ if (scrollToTopButton) {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
+    });
+  });
+}
+
+import { Datepicker } from "vanillajs-datepicker";
+const calendarInputs = document.querySelectorAll(".input--calendar");
+if (calendarInputs) {
+  calendarInputs.forEach((calendar) => {
+    const datepicker = new Datepicker(calendar, {
+      format: "dd.mm.yyyy",
     });
   });
 }

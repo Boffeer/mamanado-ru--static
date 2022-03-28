@@ -1,4 +1,7 @@
 <extends src="src/layouts/base.html">
+	<block name="styles">
+		<style></style>
+	</block>
 	<block name="main">
 		<include src="src/blocks/breadcrumbs.html"></include>
 		<div class="container">
@@ -29,8 +32,8 @@
 							</div>
 							<div class="input__wrap input__wrap--calendar">
 								<input
-									class="input input--name"
-									name="user-name"
+									class="input input--calendar"
+									name="user_birthday"
 									type="text"
 									maxlength="50"
 								/>
@@ -63,8 +66,8 @@
 						<fieldset class="input__fieldset">
 							<div class="input__wrap input__wrap--calendar">
 								<input
-									class="input input--name"
-									name="user-name"
+									class="input input--calendar"
+									name="user_children_birthday[0]"
 									type="text"
 									maxlength="50"
 								/>

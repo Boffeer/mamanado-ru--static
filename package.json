@@ -29,6 +29,7 @@
     "sass": "^1.49.9"
   },
   "dependencies": {
-    "swiper": "^8.0.7"
+    "swiper": "^8.0.7",
+    "vanillajs-datepicker": "^1.2.0"
   }
 }
