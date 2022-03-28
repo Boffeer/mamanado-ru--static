@@ -33,6 +33,7 @@
 .partners-slider__img {
 	display: block;
 	width: 100%;
+	-o-object-fit: contain;
 	object-fit: contain;
 	height: 60px;
 }

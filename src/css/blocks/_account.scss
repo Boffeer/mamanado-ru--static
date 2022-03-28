@@ -472,6 +472,7 @@
 			left: 0;
 			top: 0;
 			@include getmask(url("../img/product/cart.svg"));
+			-webkit-mask-size: 50%;
 			mask-size: 50%;
 		}
 		&:hover {
@@ -502,6 +503,7 @@
 			left: 0;
 			top: 0;
 			@include getmask(url("../img/common/remove.svg"));
+			-webkit-mask-size: 50%;
 			mask-size: 50%;
 		}
 		&:hover::after {
@@ -692,6 +694,7 @@
 		font-size: 0;
 		@include getmask(url("../img/common/remove.svg"));
 		background-color: #ee9797;
+		-webkit-mask-size: 10px;
 		mask-size: 10px;
 		margin-left: 20px;
 	}

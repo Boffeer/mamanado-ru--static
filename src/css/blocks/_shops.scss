@@ -69,6 +69,7 @@
 
 .shops__map {
 	overflow: hidden;
+	-webkit-filter: drop-shadow(0px 14px 44px rgba(197, 197, 197, 0.25));
 	filter: drop-shadow(0px 14px 44px rgba(197, 197, 197, 0.25));
 	border-radius: 20px;
 	max-width: 670px;
@@ -79,6 +80,7 @@
 	max-width: 100%;
 	width: 100%;
 	height: 100%;
+	-o-object-fit: cover;
 	object-fit: cover;
 }
 .shops__map-placeholder--hidden {

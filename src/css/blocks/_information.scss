@@ -93,6 +93,7 @@
 		display: grid;
 		grid-template-columns: 320px auto;
 		align-items: start;
+		-moz-column-gap: 60px;
 		column-gap: 60px;
 	}
 	&:last-child {
@@ -234,6 +235,7 @@
 	}
 	.section__columns-2 {
 		display: block;
+		-moz-columns: initial;
 		columns: initial;
 	}
 	.section__column {

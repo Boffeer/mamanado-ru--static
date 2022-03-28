@@ -429,7 +429,9 @@
 	}
 }
 .radio__checkbox-hidden {
+	-moz-appearance: none;
 	appearance: none;
+	-webkit-appearance: none;
 	&:focus + .radio__checkbox {
 		outline: 2px solid var(--c-primary);
 	}
@@ -472,7 +474,9 @@
 	}
 }
 .checkbox__checkbox-hidden {
+	-moz-appearance: none;
 	appearance: none;
+	-webkit-appearance: none;
 	&:focus + .checkbox__checkbox {
 		outline: 2px solid var(--c-primary);
 	}
@@ -593,7 +597,9 @@
 	position: absolute;
 	left: 0;
 	top: 0;
+	-moz-appearance: none;
 	appearance: none;
+	-webkit-appearance: none;
 	display: block;
 	height: 100%;
 	background-size: contain;
@@ -858,6 +864,7 @@
 	grid-template-columns: 1.1fr 0.9fr;
 	gap: 30px;
 	* {
+		-moz-column-break-inside: avoid;
 		break-inside: avoid;
 		column-break-inside: avoid;
 		-webkit-column-break-inside: avoid;
