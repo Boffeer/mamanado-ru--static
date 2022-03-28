@@ -290,3 +290,24 @@
 		right: 0;
 	}
 }
+
+@media (max-width: 576px) {
+	.cart-table__cell-title {
+		font-size: 14px;
+	}
+	.cart-table__cell--product-total,
+	.cart-table__cell--product-price {
+		color: #000;
+	}
+
+	.cart-table__footer {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.cart-table__total-title {
+		font-size: 14px;
+	}
+	.cart-table__total-value {
+		font-size: 16px;
+	}
+}

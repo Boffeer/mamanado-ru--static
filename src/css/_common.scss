@@ -145,6 +145,11 @@
 		max-width: 100%;
 	}
 }
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
 
 // @button
 
@@ -215,6 +220,36 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.button__scroll-top {
+	position: fixed;
+	bottom: 60px;
+	right: 20px;
+	z-index: 40;
+	width: 40px;
+	height: 40px;
+	font-size: 0;
+	border-radius: 100%;
+	background-color: #fafafa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	transition: 0.25s all;
+	box-shadow: var(--card-shadow);
+	&:hover {
+		transform: scale(1.2);
+		transform-origin: right bottom;
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 80%;
+		height: 80%;
+		transform: rotate(-90deg);
+		background-color: var(--c-primary);
+		@include getmask(url("../img/common/angle-right.svg"));
+	}
 }
 .slider__button {
 	display: flex;
@@ -982,7 +1017,7 @@
 		max-height: 75vh;
 		box-shadow: var(--card-shadow);
 		transition: 0.35s all;
-		transform: translateX(-100vw);
+		transform: translateX(-200vw);
 	}
 	.filter--visible {
 		transform: translateX(0);
@@ -1040,6 +1075,9 @@
 	}
 	.burger__line {
 		height: 2px;
+	}
+	.filter .filter__button-hide {
+		padding-left: 0;
 	}
 }
 @media (max-width: 576px) {
@@ -1126,4 +1164,65 @@
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
+
+	.pagination {
+		padding-bottom: 30px;
+		margin-bottom: 0;
+	}
+	.pagination__button--direction {
+		font-size: 0;
+		padding: 10px;
+		background-color: #fff;
+	}
+	.pagination__prev {
+		margin-right: 24px;
+	}
+	.pagination__next {
+		margin-left: 8px;
+	}
+	.pagination__page {
+		margin-right: 16px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+		&:nth-child(6) {
+			display: none;
+		}
+	}
+	.pagination__page--break {
+		display: none;
+	}
+	.pagination__prev::before,
+	.pagination__next::after {
+		margin: 0;
+	}
+
+	.filter {
+		padding-top: 0;
+		height: 100%;
+		max-width: 100%;
+		width: 100%;
+		bottom: 52px;
+		max-height: calc(1vh * 100 - 52px - 41px);
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.filter--visible {
+		transform: translateX(-10px);
+	}
+	.filter__category-name {
+		font-size: 18px;
+		line-height: 120%;
+		margin-bottom: 15px;
+	}
+
+	.checkbox__label,
+	.radio__label {
+		font-size: 14px;
+	}
+	.button__scroll-top {
+		font-size: 0;
+		padding: 0;
+	}
+
 }

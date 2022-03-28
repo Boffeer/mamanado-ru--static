@@ -364,3 +364,14 @@ if (filterVisibilityTogglers) {
     });
   });
 }
+
+// on button click scroll to top
+const scrollToTopButton = document.querySelector(".button__scroll-top");
+if (scrollToTopButton) {
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}

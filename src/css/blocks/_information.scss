@@ -317,4 +317,39 @@
 	.refund__container {
 		padding-bottom: 40px;
 	}
+
+	.article-page__container {
+		padding-top: 0;
+		background-color: #fff;
+		border: none;
+	}
+	.article-page__container-inner {
+		h1 {
+			font-size: 21px;
+			margin-bottom: 12px;
+		}
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-size: 16px;
+			margin-bottom: 12px;
+		}
+		p {
+			font-size: 14px;
+			margin-bottom: 18px;
+		}
+		ul,
+		ol {
+			margin-bottom: 18px;
+			li {
+				font-size: 14px;
+				margin-bottom: 12px;
+			}
+		}
+		img {
+			margin-bottom: 18px;
+		}
+	}
 }

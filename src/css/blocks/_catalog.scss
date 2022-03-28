@@ -189,6 +189,7 @@
 	.category__subcategories {
 		padding-left: 0;
 		padding-right: 0;
+		width: calc(100% + 10px);
 	}
 	.category-subcategories__button-prev,
 	.category-subcategories__button-next {
@@ -196,5 +197,22 @@
 	}
 	.category__heading {
 		margin-bottom: 15px;
+	}
+
+	.category__subcategory {
+		padding-top: 9px;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-bottom: 12px;
+		font-size: 14px;
+	}
+	.category-subcategories {
+		padding-bottom: 20px;
+	}
+	.category__catalog {
+		gap: 14px;
+	}
+	.page__category {
+		background-color: #fafafa;
 	}
 }

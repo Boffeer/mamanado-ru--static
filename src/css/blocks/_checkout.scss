@@ -171,3 +171,44 @@
 		box-shadow: 0px 14px 44px rgba(197, 197, 197, 0.25);
 	}
 }
+
+@media (max-width: 767px) {
+	.checkout-order {
+		margin-top: 15px;
+		padding-top: 18px;
+	}
+	.checkout-order__title {
+		font-size: 19px;
+		line-height: 24px;
+	}
+	.checkout-shipping__title {
+		font-size: 14px;
+		margin-bottom: 12px;
+	}
+	.checkout-total__value {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		color: #444444;
+	}
+	.checkout-order__column .input__wrap--promo {
+		margin-bottom: 30px;
+	}
+
+	.success {
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+	.success__title {
+		font-weight: 700;
+		font-size: 21px;
+		line-height: 26px;
+		margin-bottom: 10px;
+	}
+	.success__desc {
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 175.5%;
+		margin-bottom: 10px;
+	}
+}

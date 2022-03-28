@@ -175,3 +175,61 @@
 		}
 	}
 }
+
+@media (max-width: 576px) {
+	.blog {
+		padding-bottom: 0;
+	}
+	.blog__container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.blog__title {
+		padding-left: 10px;
+	}
+	.blog__socials {
+		padding-right: 10px;
+	}
+	.gallery__mobile-scrollable.blog__gallery {
+		padding-left: 10px;
+		padding-top: 15px;
+		padding-bottom: 40px;
+		display: flex;
+		overflow-x: scroll;
+		overflow-scrolling: touch;
+		-webkit-overflow-scrolling: touch;
+
+		.article-card {
+			min-width: 220px;
+			max-width: 220px;
+		}
+		.article-card__title {
+			font-size: 14px;
+		}
+	}
+	.page__blog {
+		.blog__title,
+		.blog__socials {
+			padding: 0;
+		}
+		.blog__container {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.blog__gallery {
+			padding-top: 15px;
+			margin-bottom: 20px;
+		}
+		.article-card__img-link {
+			height: 84px;
+		}
+		.article-card__desc {
+			// show only 3 first lines
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}

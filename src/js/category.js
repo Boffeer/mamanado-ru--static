@@ -2,7 +2,7 @@ import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
 Swiper.use([Navigation, Autoplay, Pagination]);
 
 let subcategories = new Swiper(".category-subcategories", {
-  spaceBetween: 20,
+  spaceBetween: 11,
   grabCursor: true,
   slidesPerView: "auto",
   effect: "creative",
@@ -18,5 +18,10 @@ let subcategories = new Swiper(".category-subcategories", {
   navigation: {
     nextEl: ".category-subcategories__button-next",
     prevEl: ".category-subcategories__button-prev",
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 20,
+    },
   },
 });
