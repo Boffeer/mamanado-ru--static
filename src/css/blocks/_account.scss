@@ -751,3 +751,11 @@
 		padding-right: 20px;
 	}
 }
+
+@media (min-width: 1200px) {
+	.register-form {
+		.input__fieldset .input__wrap {
+			margin-right: 0;
+		}
+	}
+}

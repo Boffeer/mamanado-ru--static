@@ -89,7 +89,8 @@ const featuredSliderOptions = {
   breakpoints: {
     // when window width is >= 320px
     1200: {
-      spaceBetween: 6,
+      spaceBetween: 20,
+      slidesPerView: 4,
     },
     992: {
       slidesPerView: 4,
@@ -419,11 +420,48 @@ if (scrollToTopButton) {
 }
 
 import { Datepicker } from "vanillajs-datepicker";
+import ru from "vanillajs-datepicker/js/i18n/locales/ru.js";
+Object.assign(Datepicker.locales, ru);
 const calendarInputs = document.querySelectorAll(".input--calendar");
 if (calendarInputs) {
   calendarInputs.forEach((calendar) => {
     const datepicker = new Datepicker(calendar, {
-      format: "dd.mm.yyyy",
+      format: "dd M. yyyy",
+      autohide: true,
+      maxDate: new Date(),
+      language: "ru",
     });
   });
 }
+
+const phones = document.querySelectorAll(".js-phone");
+if (phones) {
+  phones.forEach((phone) => {
+    // copy phone number to clipboard on click
+    phone.addEventListener("click", (event) => {
+      if (window.innerWidth > 1199) {
+        event.preventDefault();
+        const phoneNumber = phone.textContent;
+        const textArea = document.createElement("textarea");
+        textArea.value = phoneNumber;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        textArea.remove();
+
+        const phoneNummber = phone.innerText;
+        const copiedLabel = phone.getAttribute("data-label");
+        phone.innerText = copiedLabel;
+
+        setTimeout(() => {
+          phone.innerText = phoneNummber;
+        }, 2500);
+      }
+    });
+  });
+}
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  const headerTabs = document.querySelector(".header-nav__tabs");
+  headerTabs.classList.remove("header-nav__tabs--loading");
+});

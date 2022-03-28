@@ -4,7 +4,9 @@
 	mask-repeat: no-repeat;
 	-webkit-mask-repeat: no-repeat;
 	mask-position: center;
+	-webkit-mask-position: center;
 	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 
 .form-privacy {
@@ -851,7 +853,10 @@
 }
 
 .section__columns-2 {
-	columns: 2;
+	// columns: 2;
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 30px;
 	* {
 		break-inside: avoid;
 		column-break-inside: avoid;

@@ -224,6 +224,9 @@
 	z-index: 3;
 	background: #fff;
 }
+.header-nav__tabs--loading {
+	display: none;
+}
 .header-nav__dropdown {
 	// display: none;
 	padding-top: 35px;
@@ -345,11 +348,11 @@
 	background-color: #686868;
 	font-size: 0;
 	transition: 0.25s all;
-	--search-mask: url("../img/common/search.svg") center / 15px 15px;
-	mask: var(--search-mask);
-	mask-repeat: no-repeat;
-	-webkit-mask: var(--search-mask);
-	-webkit-mask-repeat: no-repeat;
+	@include getmask(url("../img/common/search.svg") center / 15px 15px);
+	// mask: var(--search-mask);
+	// mask-repeat: no-repeat;
+	// -webkit-mask: var(--search-mask);
+	// -webkit-mask-repeat: no-repeat;
 	&:focus,
 	&:hover {
 		background-color: var(--c-primary);

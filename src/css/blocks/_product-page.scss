@@ -448,7 +448,23 @@
 	height: 3px;
 	min-width: 150px;
 	margin-right: 10px;
+	&::-webkit-progress-bar {
+		background-color: #ececec;
+	}
+	&::-webkit-progress-value {
+		background: var(--c-primary);
+		color: var(--c-primary);
+	}
+	&::-moz-progress-bar {
+		background-color: #ececec;
+	}
+	&::-moz-progress-value {
+		background: var(--c-primary);
+		color: var(--c-primary);
+	}
 }
+// progress bar change value color
+
 .reviews-dash__total {
 	width: 50px;
 	display: block;
