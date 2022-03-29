@@ -147,6 +147,7 @@
 .cart-table__size-current {
 	padding-left: 10px;
 	display: flex;
+	color: #444444;
 	&::after {
 		content: "";
 		margin-left: 3px;
@@ -180,6 +181,7 @@
 		display: block;
 		width: 100%;
 		margin-bottom: 10px;
+		color: #444444;
 		&:focus,
 		&:hover {
 			color: var(--c-primary);

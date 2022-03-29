@@ -39,6 +39,7 @@
 	position: relative;
 	margin-right: 18px;
 	overflow: visible;
+	color: #444444;
 	.bayan__bottom {
 		height: 200%;
 	}
@@ -48,6 +49,7 @@
 	display: flex;
 	align-items: center;
 	padding-top: 3px;
+	color: #444444;
 	&:after {
 		content: "";
 		display: block;
@@ -77,6 +79,7 @@
 	font-size: 14px;
 	line-height: 140.4%;
 	cursor: pointer;
+	color: #444444;
 	&:focus,
 	&:hover {
 		background: #f6fbff;
@@ -399,14 +402,16 @@
 		padding-top: 0;
 		padding-bottom: 0;
 		position: fixed;
-		top: 0;
+		top: -2px;
 		left: 0;
 		width: 100%;
-		height: 100%;
+		height: calc(100% + 2px);
 		max-width: 100%;
 		pointer-events: none;
+		transition: 0.25s all;
 	}
 	.header__container {
+		transition: 0.25s all;
 		padding-top: 20px;
 		max-width: 100%;
 		justify-content: center;
@@ -416,21 +421,25 @@
 	}
 	.header__contacts {
 		order: 100;
+		transition: 0.25s all;
 	}
 	.header--burger-opened {
 		overflow: scroll;
 		pointer-events: auto;
+		background-color: #fff;
 		.header__container {
 			top: 0;
 			pointer-events: auto;
 			height: 100%;
 		}
 		.header__mobile {
+			position: -webkit-sticky;
 			position: sticky;
 			top: 0;
 		}
 	}
 	.header-userbar {
+		transition: 0.25s all;
 		position: fixed;
 		bottom: 5px;
 		left: 0;
@@ -448,6 +457,7 @@
 		pointer-events: auto;
 	}
 	.header-userbar__item {
+		transition: 0.25s all;
 		padding-top: 14px;
 		padding-bottom: 14px;
 		margin-left: 0;
@@ -587,7 +597,7 @@
 		background-color: #f8f8f8;
 		margin-right: 0;
 		padding-top: 22px;
-		padding-bottom: 80px;
+		padding-bottom: 160px;
 		justify-content: center;
 		align-items: center;
 	}
@@ -602,6 +612,9 @@
 	.header--search-active .search {
 		// bottom: -160px;
 		transform: translateY(-95vh);
+	}
+	.header__geo .bayan__bottom {
+		height: 280%;
 	}
 }
 
@@ -636,5 +649,23 @@
 	.header__container {
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.search {
+		transform: none;
+		top: 30px;
+		bottom: unset;
+		opacity: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	.header--search-active .search {
+		bottom: unset;
+		transform: none;
+		opacity: 1;
+		-webkit-appearance: initial;
+		-moz-appearance: initial;
+		appearance: initial;
 	}
 }

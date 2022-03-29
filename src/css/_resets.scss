@@ -50,5 +50,9 @@ body {
 @media (max-width: 767px) {
 	html {
 		--fz-base: 15px;
+		transition: 0.25s all;
+	}
+	body {
+		transition: 0.25s all;
 	}
 }
