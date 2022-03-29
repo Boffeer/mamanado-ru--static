@@ -74,6 +74,11 @@ let offersSlider = new Swiper(".offers-slider", {
   autoplay: {
     delay: 15000,
   },
+  pagination: {
+    el: ".offers-slider__pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
 });
 
 const featuredSliderOptions = {

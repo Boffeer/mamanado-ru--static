@@ -399,7 +399,7 @@
 		padding-top: 0;
 		padding-bottom: 0;
 		position: fixed;
-		bottom: 0;
+		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
@@ -409,7 +409,7 @@
 	.header__container {
 		padding-top: 20px;
 		max-width: 100%;
-		flex-direction: column;
+		justify-content: center;
 		transition: 0.55s all;
 		top: -200vh;
 		// overflow: auto;
@@ -418,10 +418,16 @@
 		order: 100;
 	}
 	.header--burger-opened {
-		overflow: auto;
+		overflow: scroll;
+		pointer-events: auto;
 		.header__container {
 			top: 0;
 			pointer-events: auto;
+			height: 100%;
+		}
+		.header__mobile {
+			position: sticky;
+			top: 0;
 		}
 	}
 	.header-userbar {
@@ -590,9 +596,12 @@
 		pointer-events: auto;
 		z-index: 1;
 		transform: translateY(-300vh);
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.header--search-active .search {
-		bottom: -160px;
+		// bottom: -160px;
+		transform: translateY(-95vh);
 	}
 }
 
